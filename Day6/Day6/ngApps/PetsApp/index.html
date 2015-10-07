@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html ng-app="PetsApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+</head>
+<body ng-controller="PetsController as vm">
+  
+    <ul>
+        <li ng-repeat="pet in vm.pets">
+            {{pet.name}}
+            <ul>
+                <li ng-repeat="animal in pet.animals">
+                    {{animal.name}} <img ng-src="{{animal.src}}"
+     style="width: 200px; height: 200px" />
+                </li>
+            </ul>
+       </li>
+    
+         
+          
+
+    </ul>
+    
+    
+    
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="petapp.js"></script>
+    <script src="PetController.js"></script>
+</body>
+</html>

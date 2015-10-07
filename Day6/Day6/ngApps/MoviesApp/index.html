@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="MoviesApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {      display: none !important;}
+    </style>
+</head>
+<body ng-controller="MoviesController as vm">
+    <!--vm(view model) is the variable  to represent the moviescontroller-->
+
+    <ul>
+        <!--li movie is like a iterator-->
+        <!--ng-cloak it avoids running the html and display the javascript-->
+    <li ng-repeat="movie in vm.movies" ng-cloak>
+        {{movie.title}}
+        </li>
+    </ul>
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Controllers.js"></script>
+</body>
+</html>

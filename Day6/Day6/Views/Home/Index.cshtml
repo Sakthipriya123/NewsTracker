@@ -1,0 +1,59 @@
+﻿@{ 
+    Layout = null;
+}
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MultiPage">
+<head>
+    <title></title>
+    <base href="/" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/app.css" rel="stylesheet" />
+    <style>
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: 40%;
+            height: 60%;
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron well">
+                    <h2>
+                        Utsav Fashions
+                    </h2>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a href="/HomePage">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Product">Collections</a>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+       
+   </div>
+    <div></div>
+
+    <ng-view></ng-view>
+
+        <footer class="container-fluid">
+            <p>copyright by Priya</p>
+        </footer>
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/ngApps/MultiPage/app.js"></script>
+    <script src="~/ngApps/MultiPage/Controllers.js"></script>
+
+
+</body>
+</html>

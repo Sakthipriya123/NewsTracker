@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html ng-app="CalculatorApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-controller="CalculatorController as vm">
+
+    <form ng-submit="vm.submitForm()">
+        <input type='number' ng-model="vm.num1" />
+        <input type='number' ng-model="vm.num2"/>
+        <input type="submit" value='save' />
+        <h1>{{vm.num}}</h1>
+
+    </form>
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Contoller.js"></script>
+</body>
+</html>

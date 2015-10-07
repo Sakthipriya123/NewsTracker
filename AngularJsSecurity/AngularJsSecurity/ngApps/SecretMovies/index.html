@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html ng-app="SecretMovies">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body ng-controller="MovieListController as vm" >
+    
+
+    <div ng-controller="AccountController as account">
+    
+    <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a>
+
+    <h1>Movies</h1>
+    <form ng-submit="account.login()">
+        {{account.loginMessage}}
+        <div>
+            <label>UserName:</label>
+            <input ng-model="account.username"/> <!--Alex@CoderCamps.com-->
+        </div>
+        <div>
+            <label>Password:</label>
+            <input ng-model="account.password"/><!--Secret123!-->
+         </div>
+        <input type="submit" value="Login"/>
+
+
+    </form>
+</div>
+
+    <ul>
+        <li ng-repeat="movie in vm.movies">
+            {{movie.title}}
+        </li>
+    </ul>
+
+
+
+    <script src="../../Scripts/angular.min.js"></script>
+    <script src="../../Scripts/jquery-2.1.4.min.js"></script>
+    <script src="app.js"></script>
+    <script src="Controller.js"></script>
+
+</body>
+</html>

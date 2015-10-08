@@ -231,6 +231,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="ngAPP\NewsApp\Catagories.html" />
+    <Content Include="ngAPP\NewsApp\Details.html" />
     <Content Include="ngAPP\NewsApp\HomePage.html" />
     <Content Include="ngAPP\NewsApp\Publish.html" />
     <Content Include="ngAPP\NewsApp\Signin.html" />

@@ -26,6 +26,10 @@ var NewsPage;
             templateUrl: '/ngApp/NewsApp/Catagories.html',
             controller: 'NewsListController as vm'
         })
+            .when('/Details/:id', {
+            templateUrl: '/ngApp/NewsApp/Details.html',
+            controller: 'NewsDetailController as vm'
+        })
             .otherwise('/');
         $locationProvider.html5Mode(true);
     });
@@ -47,7 +51,7 @@ var NewsPage;
             }
         });
     });
-    angular.module('News').config(function ($httpProvider) {
+    angular.module('NewsPage').config(function ($httpProvider) {
         $httpProvider.interceptors.push('authInterceptor');
     });
     ;

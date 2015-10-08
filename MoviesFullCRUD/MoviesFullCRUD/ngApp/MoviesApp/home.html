@@ -1,4 +1,7 @@
-﻿<table>
+﻿ <h3>{{vm.taxAmount}}</h3>
+<h3>{{vm.randomMovies}}</h3>
+
+<table>
     <tr ng-repeat="movie in vm.movies">
         <td>
             <a href="/edit/{{movie.id}}" ng-show="account.isLoggedIn()">Edit</a>
@@ -9,5 +12,7 @@
     </tr>
 
 </table>
+
+
 
 <a href="/add" ng-show="account.isLoggedIn()">Add Movie</a>

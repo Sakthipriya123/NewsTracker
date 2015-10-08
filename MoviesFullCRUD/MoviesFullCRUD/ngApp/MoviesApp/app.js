@@ -22,7 +22,8 @@ var MoviesApp;
             controller: 'MoviesEditController as vm'
         });
         $locationProvider.html5Mode(true);
-    });
+    }).constant('movieServiceUrl', 'http://MoviesWebAPIApp.azurewebsites.net/api/movies/:id')
+        .constant('authenticateURL', 'http://MoviesWebAPIApp.azurewebsites.net/Token');
     angular.module('MoviesApp').factory('authInterceptor', function ($q, $window, $location) {
         return ({
             request: function (config) {
@@ -46,4 +47,3 @@ var MoviesApp;
     });
     ;
 })(MoviesApp || (MoviesApp = {}));
-//# sourceMappingURL=app.js.map

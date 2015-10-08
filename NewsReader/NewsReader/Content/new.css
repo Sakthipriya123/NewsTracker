@@ -4,7 +4,7 @@
 
 }
 table td tr{
-    text-overflow:ellipsis;  
+    text-overflow:ellipsis;
     width: 25%;
     height: 100px;  
 }
@@ -71,6 +71,10 @@ footer{
 .carosel-control:hover {
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.category-description {
+    text-align: left;
 }
 
         /*//constructor(private $resource: ng.resource.IResourceService) {

@@ -65,5 +65,21 @@
                 });
             }
         }
-        angular.module('NewsPage').controller('NewsListController', NewsListController);
+    angular.module('NewsPage').controller('NewsListController', NewsListController);
+
+    class NewsDetailController {
+
+        public article;
+
+        constructor(private $http: ng.IHttpService, $routeParams: ng.route.IRouteParamsService) {
+            $http.get('ngAPP/NewsApp/Products.json').success((data: any) => {
+                this.article = data.filter((item) => {
+                    return item.ID == $routeParams["id"];
+                })[0];
+            }).catch((message) => {
+                alert(message);
+            });
+        }
+    }
+    angular.module('NewsPage').controller('NewsDetailController', NewsDetailController);
 }

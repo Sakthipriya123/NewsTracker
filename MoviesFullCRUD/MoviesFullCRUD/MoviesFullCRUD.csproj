@@ -305,6 +305,7 @@
   <ItemGroup>
     <TypeScriptCompile Include="ngApp\MoviesApp\app.ts" />
     <TypeScriptCompile Include="ngApp\MoviesApp\Controllers.ts" />
+    <TypeScriptCompile Include="ngApp\MoviesApp\services.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-animate.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-cookies.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angularjs\angular-mocks.d.ts" />

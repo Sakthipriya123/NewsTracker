@@ -50,6 +50,21 @@ var NewsPage;
             return NewsListController;
         })();
         angular.module('NewsPage').controller('NewsListController', NewsListController);
+        var NewsDetailController = (function () {
+            function NewsDetailController($http, $routeParams) {
+                var _this = this;
+                this.$http = $http;
+                $http.get('ngAPP/NewsApp/Products.json').success(function (data) {
+                    _this.article = data.filter(function (item) {
+                        return item.ID == $routeParams["id"];
+                    })[0];
+                }).catch(function (message) {
+                    alert(message);
+                });
+            }
+            return NewsDetailController;
+        })();
+        angular.module('NewsPage').controller('NewsDetailController', NewsDetailController);
     })(Controllers = NewsPage.Controllers || (NewsPage.Controllers = {}));
 })(NewsPage || (NewsPage = {}));
 //# sourceMappingURL=Controllers.js.map

@@ -2,19 +2,21 @@ var MoviesApp;
 (function (MoviesApp) {
     var Controllers;
     (function (Controllers) {
-        var movieServiceUrl = 'http://MoviesWebAPIApp.azurewebsites.net/api/movies/:id';
-        var authenticateURL = 'http://MoviesWebAPIApp.azurewebsites.net/Token';
+        //const movieServiceUrl = 'http://MoviesWebAPIApp.azurewebsites.net/api/movies/:id';
+        //const authenticateURL = 'http://MoviesWebAPIApp.azurewebsites.net/Token';
         var MoviesListController = (function () {
-            function MoviesListController($resource) {
+            function MoviesListController(productService, $resource, movieServiceUrl) {
                 this.$resource = $resource;
                 var MovieResource = $resource(movieServiceUrl);
                 this.movies = MovieResource.query();
+                this.taxAmount = productService.calculateTax(120000);
+                this.randomMovies = productService.randomQuote();
             }
             return MoviesListController;
         })();
         angular.module('MoviesApp').controller('MoviesListController', MoviesListController);
         var MoviesAddController = (function () {
-            function MoviesAddController($resource, $location) {
+            function MoviesAddController($resource, $location, movieServiceUrl) {
                 this.$resource = $resource;
                 this.$location = $location;
                 this.MovieResource = $resource(movieServiceUrl);
@@ -29,7 +31,7 @@ var MoviesApp;
         })();
         angular.module('MoviesApp').controller('MoviesAddController', MoviesAddController);
         var MoviesDeleteController = (function () {
-            function MoviesDeleteController($routeParams, $resource, $location) {
+            function MoviesDeleteController($routeParams, $resource, $location, movieServiceUrl) {
                 this.$routeParams = $routeParams;
                 this.$location = $location;
                 this.MovieResource = $resource(movieServiceUrl);
@@ -47,7 +49,7 @@ var MoviesApp;
         })();
         angular.module('MoviesApp').controller('MoviesDeleteController', MoviesDeleteController);
         var MoviesEditController = (function () {
-            function MoviesEditController($routeParams, $resource, $location) {
+            function MoviesEditController($routeParams, $resource, $location, movieServiceUrl) {
                 this.$routeParams = $routeParams;
                 this.$location = $location;
                 this.MovieResource = $resource(movieServiceUrl);
@@ -65,7 +67,8 @@ var MoviesApp;
         })();
         angular.module('MoviesApp').controller('MoviesEditController', MoviesEditController);
         var AccountController = (function () {
-            function AccountController($http, $window, $location) {
+            function AccountController(authenticateURL, $http, $window, $location) {
+                this.authenticateURL = authenticateURL;
                 this.$http = $http;
                 this.$window = $window;
                 this.$location = $location;
@@ -73,7 +76,7 @@ var MoviesApp;
             AccountController.prototype.login = function () {
                 var _this = this;
                 var data = "grant_type=password&username=" + this.username + "&password=" + this.password;
-                this.$http.post(authenticateURL, data, {
+                this.$http.post(this.authenticateURL, data, {
                     headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                 }).success(function (result) {
                     _this.$window.sessionStorage.setItem('token', result.access_token);
@@ -93,4 +96,3 @@ var MoviesApp;
         angular.module('MoviesApp').controller('AccountController', AccountController);
     })(Controllers = MoviesApp.Controllers || (MoviesApp.Controllers = {}));
 })(MoviesApp || (MoviesApp = {}));
-//# sourceMappingURL=Controllers.js.map

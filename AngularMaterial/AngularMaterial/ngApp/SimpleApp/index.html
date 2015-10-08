@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html ng-app="SimpleApp">
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body ng-controller="HomeController as vm">
+
+    <!--for responsive use hide-sm for small device, for push it down to next row use layout-sm-->
+    <div layout="row" layout-sm="column">
+        <div flex="50" style="background-color:red">
+            Apples
+        </div>
+        <div flex="25" style="background-color:blue" >
+            Blueberry
+        </div>
+        <div flex="25" style="background-color:green" hide-sm>
+            Grapes
+        </div>
+    </div>
+    
+      
+    <md-button class="md-raised">OK</md-button>
+    <md-button class="md-raised md-primary">OK Primary</md-button>
+    <md-button class="md-raised md-warn">OK Warning</md-button>
+
+        <md-icon>adb</md-icon>
+    <md-icon>adb</md-icon>
+
+
+    <!--<form name="movieForm" novalidate>
+        <div layout="row" layout-padding>
+            <md-input-container>
+                <label>Movie Title</label>
+                <input name="title" ng-model="vm.title" md-maxlength="10" required>
+                <div ng-messages="movieForm.title.$error">
+                    <div ng-message="required">This is required.</div>
+                    <div ng-message="md-maxlength">The name has to be less than 10 characters long.</div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Movie Director</label>
+                <input name="director" ng-model="vm.director" required>
+                <div ng-messages="movieForm.director.$error">
+                    <div ng-message="required">This is required.</div>
+                </div>
+            </md-input-container>
+        </div>
+        <div>
+            <md-datepicker ng-model="vm.dateReleased" md-placeholder="Release Date"></md-datepicker>
+        </div>
+        <div>
+            <md-button class="md-primary">Save</md-button>
+        </div>
+    </form>-->
+
+    <md-button ng-click="vm.openDialog()">Open</md-button>
+    <hr/>
+    {{vm.favoriteColor}}
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular-messages.min.js"></script>
+    <script src="https://gitcdn.xyz/repo/angular/bower-material/v0.11.0/angular-material.js"></script>
+    <script src="app.js"></script>
+    <script src="Controller.js"></script>
+
+    
+
+</body>
+</html>

@@ -46,3 +46,4 @@ var SecretMovies;
         angular.module('SecretMovies').controller('AccountController', AccountController);
     })(Controllers = SecretMovies.Controllers || (SecretMovies.Controllers = {}));
 })(SecretMovies || (SecretMovies = {}));
+//# sourceMappingURL=Controller.js.map

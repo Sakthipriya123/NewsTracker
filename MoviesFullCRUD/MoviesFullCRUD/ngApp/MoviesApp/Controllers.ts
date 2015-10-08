@@ -6,16 +6,16 @@
     class MoviesListController {
 
         public movies;
-        public taxAmount;
-        public randomMovies;
+        //public taxAmount;
+        //public randomQuotes;
 
-        constructor(productService: MoviesApp.Services.ProductService,private $resource: ng.resource.IResourceService, movieServiceUrl : string) {
-            let MovieResource = $resource(movieServiceUrl);
-            this.movies = MovieResource.query();
+        constructor(productService: MoviesApp.Services.ProductService, movieService: MoviesApp.Services.MovieService) {
+            
+            this.movies = movieService.listMovies();
 
-            this.taxAmount = productService.calculateTax(120000);
+            //this.taxAmount = productService.calculateTax(120000);
 
-            this.randomMovies = productService.randomQuote();
+            //this.randomQuotes = productService.randomQuote();
 
         }
     }
@@ -25,15 +25,15 @@
     class MoviesAddController {
 
         public movieToCreate;
-        public MovieResource;
+        
 
         addMovie() {
-            this.MovieResource.save(this.movieToCreate).$promise.then(() => {
+            this.movieService.save(this.movieToCreate).then(() => {
                 this.$location.path('/');
             });
         }
-        constructor(private $resource: ng.resource.IResourceService, private $location: ng.ILocationService, movieServiceUrl: string) {
-            this.MovieResource = $resource(movieServiceUrl);
+        constructor(private movieService: MoviesApp.Services.MovieService, private $location: ng.ILocationService) {
+            
         }
 
     }
@@ -43,23 +43,20 @@
 
     class MoviesDeleteController {
         public movieToDelete;
-        private MovieResource;
-
-        deleteMovie() {
-            this.MovieResource.delete({ id: this.$routeParams['id'] }).$promise.then(() => {
+        deleteMovie(){
+            this.movieService.deleteMovie(this.movieToDelete.id).then(() => {
                 this.$location.path('/');
             });
         }
 
-        constructor(private $routeParams: ng.route.IRouteParamsService, $resource: ng.resource.IResourceService, private $location: ng.ILocationService, movieServiceUrl: string) {
+        constructor(
+            private movieService: MoviesApp.Services.MovieService,
+            private $location: ng.ILocationService,
+            private $routeParams: ng.route.IRouteParamsService) {
 
-            this.MovieResource = $resource(movieServiceUrl);
-            this.movieToDelete = this.MovieResource.get({
-                id: $routeParams['id']
-            });
-
+           this.movieToDelete = this.movieService.getMovie($routeParams['id']);
+        
         }
-
 
     }
 
@@ -68,20 +65,19 @@
     class MoviesEditController {
 
         public movieToEdit;
-        private MovieResource;
+        
 
         editMovie() {
-            this.MovieResource.save(this.movieToEdit).$promise.then(() => {
+            this.movieService.save(this.movieToEdit).then(() => {
                 this.$location.path('/');
             });
         }
 
-        constructor(private $routeParams: ng.route.IRouteParamsService, $resource: ng.resource.IResourceService, private $location: ng.ILocationService, movieServiceUrl: string) {
+        constructor(private $routeParams: ng.route.IRouteParamsService, private movieService: MoviesApp.Services.MovieService, private $location: ng.ILocationService, movieServiceUrl: string) {
 
-            this.MovieResource = $resource(movieServiceUrl);
-            this.movieToEdit = this.MovieResource.get({
-                id: $routeParams['id']
-            });
+
+            this.movieToEdit = this.movieService.getMovie($routeParams['id']);
+               
 
         }
     }

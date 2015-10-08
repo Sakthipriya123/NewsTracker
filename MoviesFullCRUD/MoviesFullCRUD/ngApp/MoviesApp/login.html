@@ -1,12 +1,18 @@
 ﻿{{account.loginMessage}}
-<form ng-submit="account.login()">
+<form name='loginForm' ng-submit="account.login()" novalidate>
     <div>
         <label>Username</label>
-        <input ng-model="account.username"/>
+        <input name="username" ng-model="account.username" required/>
+        <div ng-show="loginForm.username.$touched && loginForm.username.$error.required">
+username is required
+        </div>
      </div>
     <div>
         <label>Password</label>
-        <input ng-model="account.password" />
+        <input name="password" ng-model="account.password" required ng-pattern="/^(?:(?=.*[a-z])(?:(?=.*[A-Z])(?=.*[\d\W])|(?=.*\W)(?=.*\d))|(?=.*\W)(?=.*[A-Z])(?=.*\d)).{8,}$/" title="Invalid Password"/>
+        <div ng-show="loginForm.password.$touched && loginForm.password.$error.pattern">
+            Password ids week
+        </div>
        </div>
     <input type="submit" />
 </form>

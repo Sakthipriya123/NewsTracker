@@ -5,25 +5,24 @@ var MoviesApp;
         //const movieServiceUrl = 'http://MoviesWebAPIApp.azurewebsites.net/api/movies/:id';
         //const authenticateURL = 'http://MoviesWebAPIApp.azurewebsites.net/Token';
         var MoviesListController = (function () {
-            function MoviesListController(productService, $resource, movieServiceUrl) {
-                this.$resource = $resource;
-                var MovieResource = $resource(movieServiceUrl);
-                this.movies = MovieResource.query();
-                this.taxAmount = productService.calculateTax(120000);
-                this.randomMovies = productService.randomQuote();
+            //public taxAmount;
+            //public randomQuotes;
+            function MoviesListController(productService, movieService) {
+                this.movies = movieService.listMovies();
+                //this.taxAmount = productService.calculateTax(120000);
+                //this.randomQuotes = productService.randomQuote();
             }
             return MoviesListController;
         })();
         angular.module('MoviesApp').controller('MoviesListController', MoviesListController);
         var MoviesAddController = (function () {
-            function MoviesAddController($resource, $location, movieServiceUrl) {
-                this.$resource = $resource;
+            function MoviesAddController(movieService, $location) {
+                this.movieService = movieService;
                 this.$location = $location;
-                this.MovieResource = $resource(movieServiceUrl);
             }
             MoviesAddController.prototype.addMovie = function () {
                 var _this = this;
-                this.MovieResource.save(this.movieToCreate).$promise.then(function () {
+                this.movieService.save(this.movieToCreate).then(function () {
                     _this.$location.path('/');
                 });
             };
@@ -31,17 +30,15 @@ var MoviesApp;
         })();
         angular.module('MoviesApp').controller('MoviesAddController', MoviesAddController);
         var MoviesDeleteController = (function () {
-            function MoviesDeleteController($routeParams, $resource, $location, movieServiceUrl) {
-                this.$routeParams = $routeParams;
+            function MoviesDeleteController(movieService, $location, $routeParams) {
+                this.movieService = movieService;
                 this.$location = $location;
-                this.MovieResource = $resource(movieServiceUrl);
-                this.movieToDelete = this.MovieResource.get({
-                    id: $routeParams['id']
-                });
+                this.$routeParams = $routeParams;
+                this.movieToDelete = this.movieService.getMovie($routeParams['id']);
             }
             MoviesDeleteController.prototype.deleteMovie = function () {
                 var _this = this;
-                this.MovieResource.delete({ id: this.$routeParams['id'] }).$promise.then(function () {
+                this.movieService.deleteMovie(this.movieToDelete.id).then(function () {
                     _this.$location.path('/');
                 });
             };
@@ -49,17 +46,15 @@ var MoviesApp;
         })();
         angular.module('MoviesApp').controller('MoviesDeleteController', MoviesDeleteController);
         var MoviesEditController = (function () {
-            function MoviesEditController($routeParams, $resource, $location, movieServiceUrl) {
+            function MoviesEditController($routeParams, movieService, $location, movieServiceUrl) {
                 this.$routeParams = $routeParams;
+                this.movieService = movieService;
                 this.$location = $location;
-                this.MovieResource = $resource(movieServiceUrl);
-                this.movieToEdit = this.MovieResource.get({
-                    id: $routeParams['id']
-                });
+                this.movieToEdit = this.movieService.getMovie($routeParams['id']);
             }
             MoviesEditController.prototype.editMovie = function () {
                 var _this = this;
-                this.MovieResource.save(this.movieToEdit).$promise.then(function () {
+                this.movieService.save(this.movieToEdit).then(function () {
                     _this.$location.path('/');
                 });
             };
@@ -96,3 +91,4 @@ var MoviesApp;
         angular.module('MoviesApp').controller('AccountController', AccountController);
     })(Controllers = MoviesApp.Controllers || (MoviesApp.Controllers = {}));
 })(MoviesApp || (MoviesApp = {}));
+//# sourceMappingURL=Controllers.js.map

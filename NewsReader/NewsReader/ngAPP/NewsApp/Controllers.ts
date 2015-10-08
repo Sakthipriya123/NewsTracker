@@ -52,4 +52,18 @@
     }
 
     angular.module('NewsPage').controller('SignInController', SignInController);
+
+    class NewsListController {
+
+            public news;
+
+            constructor(private $http: ng.IHttpService) {
+                $http.get('ngAPP/NewsApp/Products.json').success((data : any) => {
+                    this.news = data;
+                }).catch((message) => {
+                    alert(message);
+                });
+            }
+        }
+        angular.module('NewsPage').controller('NewsListController', NewsListController);
 }

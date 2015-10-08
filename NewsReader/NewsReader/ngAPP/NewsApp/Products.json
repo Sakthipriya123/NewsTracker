@@ -1,0 +1,33 @@
+﻿[
+  {
+    
+    "Image": "https://cdn.flipboard.com/flipboard.com/ac738020f2e7cf9dc7fe366a1994adebf2f4feb6/large.jpg",
+    "Title": "Keuchel sharp, Astros beat Yankees 3-0 in AL wild-card game",
+    "Author": "Kwame Opam",
+    "Descrption": "NEW YORK (AP) — A year ago, no one could've pictured this. Yet here they were, Dallas Keuchel and the Houston Astros, soaking in champagne, merrily posing for a victory shot on the mound at Yankee Stadium. After all that losing, this was one October win to remember. Pitching on three ",
+    "Category": "Sports"
+    
+  },
+  {
+    
+    "Image": "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
+    "Title": "Facebook Is Following You",
+    "Author": " Russell Brandom",
+    "Descrption": "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed, and leave your college friend’s ill-informed rant about Pacific trade deals in the dark bowels of its servers? How else would it know to serve you with 7,000 ads for wedding dress vendors the …",
+    "Category" :  "Technology"
+  },
+  {
+   "Image": "http://o.aolcdn.com/hss/storage/midas/abca7b756bb17b5015c4a893cf22dc7b/202759823/Surface+Pro+4+fullbleed.jpg",
+    "Title": "UK pricing for Microsoft's Surface Pro 4, Lumia 950 phones and other goodies",
+    "Author": "Dan Seifert",
+    "Descrption": "It's fair to say that Microsoft's latest launch event was its most interesting for a long time. We finally learned that  ",
+     "Category":  "Technology"
+  },
+  {
+    "Image": "https://cdn.flipboard.com/businessinsider.com/558fa02299c854100961653524f142ec96cd6ea0/original.jpg",
+    "Title": "Google has bought abcdefghijklmnopqrstuvwxyz.com",
+    "Author" : "Alexei Oreskovic",
+    "Descrption": "Now that Google is Alphabet, it's going to need some extra URLs to match its new identity. But the company may be  ",
+    "Category":  "Technology"
+  }
+ ]

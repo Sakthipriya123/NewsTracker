@@ -1,5 +1,16 @@
 ﻿body {
     text-align: center;
+    font-family: 'Segoe UI';
+
+}
+table td tr{
+    text-overflow:ellipsis;  
+    width: 25%;
+    height: 100px;  
+}
+h5{
+    color: #888888 ;
+    font-style:italic;
 }
 .jumbotron well{
     text-align:center;
@@ -61,3 +72,8 @@ footer{
   text-decoration: none;
   color: rgba(0, 0, 0, 0.8);
 }
+
+        /*//constructor(private $resource: ng.resource.IResourceService) {
+        //    let NewsResource = $resource('/Products.json');
+        //    this.news = NewsResource.query();
+        //}*/

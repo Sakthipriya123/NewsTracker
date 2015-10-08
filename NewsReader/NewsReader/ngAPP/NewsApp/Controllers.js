@@ -37,6 +37,19 @@ var NewsPage;
             return SignInController;
         })();
         angular.module('NewsPage').controller('SignInController', SignInController);
+        var NewsListController = (function () {
+            function NewsListController($http) {
+                var _this = this;
+                this.$http = $http;
+                $http.get('ngAPP/NewsApp/Products.json').success(function (data) {
+                    _this.news = data;
+                }).catch(function (message) {
+                    alert(message);
+                });
+            }
+            return NewsListController;
+        })();
+        angular.module('NewsPage').controller('NewsListController', NewsListController);
     })(Controllers = NewsPage.Controllers || (NewsPage.Controllers = {}));
 })(NewsPage || (NewsPage = {}));
 //# sourceMappingURL=Controllers.js.map

@@ -1,19 +1,25 @@
 ﻿<div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <table class="table table-hover" ng-repeat="product in vm.products">
+            <table class="table table-hover" >
 
                 <tbody>
                     <tr>
-                        <td>
-                            <img ng-src="{{product.src}}"
+                        <td ng-repeat="product in vm.news " class="thumbnail" width="25%" >
+
+
+                            <img ng-src="{{product.Image}}"
                                  style="width: 200px; height: 200px" /><br />
-                            {{product.name}}<br />
-                            {{product.price}}
+                            <h4>{{product.Title}}</h4><br />
+
+                            <h5>By {{product.Author}}</h5>
+                            
+                           <p>{{product.Descrption}}</p>
+                            <em><strong>{{product.Category}}</strong></em>
                         </td>
-
+                    
                     </tr>
-
+                   
                 </tbody>
             </table>
         </div>

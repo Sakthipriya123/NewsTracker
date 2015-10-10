@@ -1,6 +1,7 @@
 var NewsPage;
 (function (NewsPage) {
-    angular.module('NewsPage', ['ngRoute', 'ngResource']).config(function ($routeProvider, $locationProvider) {
+    'use strict';
+    angular.module('NewsPage', ['ngRoute', 'ngResource', 'ui.bootstrap']).config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
             templateUrl: '/ngApp/NewsApp/HomePage.html',

@@ -12,7 +12,7 @@
         change() {
             this.$http.get(webAPIURL + '/' + this.selectedGenre.id).success((data:any) => {
                 this.movies = data[0].movies;
-            }).catch(() => { alert('Failure!'); });
+            }).catch(() => { alert('Failure!') });
 
         }
 
@@ -20,7 +20,7 @@
         constructor(private $http: ng.IHttpService) {
             this.$http.get(webAPIURL).success((data) => {
                 this.genres = data;
-            }).catch(() => { alert('Failure!'); });
+            }).catch(() => { alert('Failure!') });
 
             
             //This will cause an asynchronous funcion and movies will not equal anything because the

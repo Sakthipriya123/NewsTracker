@@ -1,7 +1,7 @@
 ﻿namespace NewsPage {
+    'use strict';
 
-
-      angular.module('NewsPage', ['ngRoute', 'ngResource']).config(
+    angular.module('NewsPage', ['ngRoute', 'ngResource', 'ui.bootstrap']).config(
         (
             $routeProvider: ng.route.IRouteProvider,
             $locationProvider: ng.ILocationProvider

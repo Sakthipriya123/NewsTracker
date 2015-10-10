@@ -3,12 +3,31 @@
     font-family: 'Segoe UI';
 
 }
-table td tr{
+.category-description{
     text-overflow:ellipsis;
     width: 25%;
-    height: 100px;  
+    height: 100px;
+         
 }
-h5{
+#category-description{
+    text-overflow:ellipsis;
+    width: 25%;    
+    display: inline-block;
+    
+}
+#author {
+    text-align: left;
+}
+#title{
+    text-align:left;
+
+}
+#desc{
+    text-align:left;
+
+}
+
+    h5{
     color: #888888 ;
     font-style:italic;
 }
@@ -73,9 +92,7 @@ footer{
   color: rgba(0, 0, 0, 0.8);
 }
 
-.category-description {
-    text-align: left;
-}
+
 
         /*//constructor(private $resource: ng.resource.IResourceService) {
         //    let NewsResource = $resource('/Products.json');

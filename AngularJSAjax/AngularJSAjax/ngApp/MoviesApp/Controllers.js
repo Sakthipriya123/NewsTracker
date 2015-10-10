@@ -25,3 +25,4 @@ var MoviesApp;
         angular.module('MoviesApp').controller('MoviesListController', MoviesListController);
     })(Controllers = MoviesApp.Controllers || (MoviesApp.Controllers = {}));
 })(MoviesApp || (MoviesApp = {}));
+//# sourceMappingURL=Controllers.js.map

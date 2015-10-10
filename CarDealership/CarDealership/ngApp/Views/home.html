@@ -1,0 +1,14 @@
+﻿
+<div class="row">
+    <div class="col-md-4 thumbnail" ng-repeat="car in vm.cars" >
+        <a href="" ng-click="vm.showModal()"> {{car.shortDescription}}</a><br />
+        
+    </div>
+    </div>
+<select ng-model="vm.selectedCar" ng-options="car.shortDescription for car in vm.cars" ></select> <!--the cars are already in the controller service memory so we no need to do the ng-change in the select-->
+
+
+<br/><br/>
+
+<img ng-src="{{vm.selectedCar.imageUrl}}" width="500" />
+<h1>{{vm.selectedCar.fullDescription}}</h1>

@@ -91,4 +91,3 @@ var MoviesApp;
         angular.module('MoviesApp').controller('AccountController', AccountController);
     })(Controllers = MoviesApp.Controllers || (MoviesApp.Controllers = {}));
 })(MoviesApp || (MoviesApp = {}));
-//# sourceMappingURL=Controllers.js.map

@@ -38,4 +38,3 @@ var MoviesApp;
         angular.module('MoviesApp').service('productService', ProductService);
     })(Services = MoviesApp.Services || (MoviesApp.Services = {}));
 })(MoviesApp || (MoviesApp = {}));
-//# sourceMappingURL=services.js.map

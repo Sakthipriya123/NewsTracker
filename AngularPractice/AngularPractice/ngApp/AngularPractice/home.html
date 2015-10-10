@@ -1,0 +1,16 @@
+﻿<h1>This is the home view</h1>
+
+<input type="text" name="name" ng-model="vm.name"/>
+<h2>{{vm.name}}</h2>
+
+<button ng-click="vm.getCars()">Let's do something</button>
+
+<div class="row">
+    <div class="col-md-4 thumbnail" ng-repeat="car in vm.cars">
+        {{car.fullDescription}}<br/>
+        <img ng-src="{{car.imageUrl}}" /><br/>
+        {{car.price}}
+    </div>
+
+</div>
+          

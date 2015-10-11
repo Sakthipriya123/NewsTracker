@@ -1,4 +1,11 @@
 ﻿
+<input ng-model="vm.search" ng-model-options="{debounce:1000}" ng-change="vm.fetch()" />
+
+<ul>
+    <li ng-repeat="item in vm.items">
+        {{item.name}}
+    </li>
+</ul>
 <div class="row">
     <div class="col-md-4 thumbnail" ng-repeat="car in vm.cars" >
         <a href="" ng-click="vm.showModal()"> {{car.shortDescription}}</a><br />

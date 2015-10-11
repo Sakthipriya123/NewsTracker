@@ -8,9 +8,8 @@
                 templateUrl: "/ngApp/Views/home.html",
                 controller: HomeController,
                 controllerAs: "vm"              
-
             })
-            //.when('/dialog', {
+                     //.when('/dialog', {
             //    templateUrl: "/ngApp/Views/dialog.html",
             //    controller: DialogController,
             //    controllerAs: "modal"
@@ -21,7 +20,7 @@
         
 
     }).constant('carServiceUrl', "http://codercamps-cardealershipapi.azurewebsites.net/api/cars")
-        //.constant('carMakesUrl',"http://codercamps-cardealershipapi.azurewebsites.net/api/makes")
+        .constant('carMakesUrl',"http://codercamps-cardealershipapi.azurewebsites.net/api/makes")
     
 
 }

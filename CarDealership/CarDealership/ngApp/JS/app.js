@@ -8,5 +8,6 @@ var CarApp;
             controllerAs: "vm"
         })
             .otherwise('/');
-    }).constant('carServiceUrl', "http://codercamps-cardealershipapi.azurewebsites.net/api/cars");
+    }).constant('carServiceUrl', "http://codercamps-cardealershipapi.azurewebsites.net/api/cars")
+        .constant('carMakesUrl', "http://codercamps-cardealershipapi.azurewebsites.net/api/makes");
 })(CarApp || (CarApp = {}));

@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="MyApp">
+<head>
+    <title>My App</title>
+</head>
+<body ng-controller="FoodController as vm">
+
+    <input ng-model="vm.search" ng-model-options="{debounce:1000}" ng-change="vm.fetch()" />
+
+    <ul>
+        <li ng-repeat="item in vm.items">
+            {{item.title}}
+        </li>
+    </ul>
+
+    <script src="/Scripts/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+</body>
+
+</html>

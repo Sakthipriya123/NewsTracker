@@ -11,15 +11,19 @@ var CarApp;
             //        this.cars = data[0].cars;
             //    }).catch(() => { alert('Failure!'); });
             //}
-            function CarService(carServiceUrl, $resource) {
+            function CarService(carServiceUrl, carMakesUrl, $resource) {
+                this.carServiceUrl = carServiceUrl;
+                this.carMakesUrl = carMakesUrl;
                 this.carResource = $resource(carServiceUrl);
-                //this.carMakes = $resource(carMakesUrl);
+                this.carMakes = $resource(carMakesUrl);
             }
-            //private carMakes;
             //private selectedCar;
             //private cars;
             CarService.prototype.listCars = function () {
                 return this.carResource.query();
+            };
+            CarService.prototype.carSearch = function () {
+                return this.carMakes.query();
             };
             return CarService;
         })();

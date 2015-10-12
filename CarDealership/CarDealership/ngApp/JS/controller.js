@@ -37,3 +37,4 @@ var CarApp;
 //doSomething() {
 //    this.carService.change();
 //}
+//# sourceMappingURL=controller.js.map

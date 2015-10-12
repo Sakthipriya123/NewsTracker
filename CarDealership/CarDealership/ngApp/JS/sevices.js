@@ -31,3 +31,4 @@ var CarApp;
         angular.module('CarApp').service('carService', CarService);
     })(Services = CarApp.Services || (CarApp.Services = {}));
 })(CarApp || (CarApp = {}));
+//# sourceMappingURL=sevices.js.map

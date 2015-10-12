@@ -23,4 +23,20 @@
         .constant('carMakesUrl',"http://codercamps-cardealershipapi.azurewebsites.net/api/makes")
     
 
+    //angular.module('CarApp').controller("DialogController", function ($scope, $location, $modal, DtaService) {
+
+
+    //    $scope.showModel = function () {
+
+    //        $modal.open({
+    //            templateUrl: '/ngApps/Views/dialog.html',
+    //                controller: 'DialogController',
+    //                controllerAs: 'modal',
+    //        });
+    //    };
+        
+
+
+
+    //});
 }

@@ -1,0 +1,15 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Cars</h3>
+</div>
+<div class="modal-body">
+
+    <h1>{{modal.car.shortDescription}}</h1>
+    <img ng-src="{{modal.car.imageUrl}}" width="350" />
+    <h4>{{modal.car.price}}</h4>
+    <h3>{{modal.car.fullDescription}}</h3>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="modal.ok()">OK</button>
+</div>
+

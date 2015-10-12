@@ -1,21 +1,16 @@
 ﻿namespace NewsPage.Controllers {
     class HomePageImage {
 
-        function($scope) {
-            $scope.myInterval = 5000;
-            $scope.noWrapSlides = false;
-            var slides = $scope.slides = [];
-            $scope.addSlide = function () {
-                var newWidth = 600 + slides.length + 1;
-                slides.push({
-                    image: 'ngAPP/NewsApp/Products.json' + newWidth + '/300',
-                    text: ['More', 'Extra', 'Lots of', 'Surplus'][slides.length % 4] + ' ' +
-                    ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-                });
-            };
-            for (var i = 0; i < 4; i++) {
-                $scope.addSlide();
-            }
+        public news;
+
+
+        constructor(private $http: ng.IHttpService) {
+            $http.get('ngAPP/NewsApp/Products.json').success((data: any) => {
+                this.news = data;
+            }).catch((message) => {
+                alert(message);
+            });
+
         }
     }
     angular.module('NewsPage').controller('HomeController', HomePageImage);
@@ -55,6 +50,8 @@
     class CatagoriesController {
 
 
+
+
     }
 
     angular.module('NewsPage').controller('CatagoriesController', CatagoriesController);
@@ -69,15 +66,8 @@
 
     class NewsListController {
 
-            public news;
-
-            constructor(private $http: ng.IHttpService) {
-                $http.get('ngAPP/NewsApp/Products.json').success((data : any) => {
-                    this.news = data;
-                }).catch((message) => {
-                    alert(message);
-                });
-            }
+     
+            
         }
     angular.module('NewsPage').controller('NewsListController', NewsListController);
 

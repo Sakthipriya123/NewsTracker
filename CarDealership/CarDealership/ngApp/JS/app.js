@@ -11,3 +11,4 @@ var CarApp;
     }).constant('carServiceUrl', "http://codercamps-cardealershipapi.azurewebsites.net/api/cars")
         .constant('carMakesUrl', "http://codercamps-cardealershipapi.azurewebsites.net/api/makes");
 })(CarApp || (CarApp = {}));
+//# sourceMappingURL=app.js.map

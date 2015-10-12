@@ -3,24 +3,15 @@ var NewsPage;
     var Controllers;
     (function (Controllers) {
         var HomePageImage = (function () {
-            function HomePageImage() {
+            function HomePageImage($http) {
+                var _this = this;
+                this.$http = $http;
+                $http.get('ngAPP/NewsApp/Products.json').success(function (data) {
+                    _this.news = data;
+                }).catch(function (message) {
+                    alert(message);
+                });
             }
-            HomePageImage.prototype.function = function ($scope) {
-                $scope.myInterval = 5000;
-                $scope.noWrapSlides = false;
-                var slides = $scope.slides = [];
-                $scope.addSlide = function () {
-                    var newWidth = 600 + slides.length + 1;
-                    slides.push({
-                        image: 'ngAPP/NewsApp/Products.json' + newWidth + '/300',
-                        text: ['More', 'Extra', 'Lots of', 'Surplus'][slides.length % 4] + ' ' +
-                            ['Cats', 'Kittys', 'Felines', 'Cutes'][slides.length % 4]
-                    });
-                };
-                for (var i = 0; i < 4; i++) {
-                    $scope.addSlide();
-                }
-            };
             return HomePageImage;
         })();
         angular.module('NewsPage').controller('HomeController', HomePageImage);
@@ -54,14 +45,7 @@ var NewsPage;
         })();
         angular.module('NewsPage').controller('SignInController', SignInController);
         var NewsListController = (function () {
-            function NewsListController($http) {
-                var _this = this;
-                this.$http = $http;
-                $http.get('ngAPP/NewsApp/Products.json').success(function (data) {
-                    _this.news = data;
-                }).catch(function (message) {
-                    alert(message);
-                });
+            function NewsListController() {
             }
             return NewsListController;
         })();

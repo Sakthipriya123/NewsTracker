@@ -13,6 +13,7 @@
     text-overflow:ellipsis;
     width: 25%;    
     display: inline-block;
+    height: inherit;
     
 }
 #author {
@@ -24,8 +25,16 @@
 }
 #desc{
     text-align:left;
+    text-size-adjust:none;
 
 }
+.heading-primary{
+    text-align:center;
+    padding:40px 0;
+}
+
+
+
 
     h5{
     color: #888888 ;

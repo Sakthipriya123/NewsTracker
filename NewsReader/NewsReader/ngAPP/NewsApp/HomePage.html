@@ -1,31 +1,26 @@
-﻿<div>
-    <div style="height: 305px">
-        <uib-carousel interval="myInterval" no-wrap="noWrapSlides">
-            <uib-slide ng-repeat="slide in slides" active="slide.active">
-                <img ng-src="{{slide.image}}" style="margin:auto;">
-                <div class="carousel-caption">
-                    <h4>Slide {{$index}}</h4>
-                    <p>{{slide.text}}</p>
+﻿    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 heading-primary">
+                <div ng-repeat="product in vm.news" class="block grid-parent col-md-4 thumbnail" id="category-description">
+                    <a href="/Details/{{product.ID}}">
+                        <img ng-src="{{product.Image}}"
+                             style="width: 300px; height: 300px" />                        
+                            <h4 id="title">{{product.Title}}</h4><br />
+                            <h5 id="author">By {{product.Author}}</h5>
+                        </a>
+                    <p id="desc">{{product.Descrption}}</p>
+                    <em><strong>{{product.Category}}</strong></em>
+                    <hr/>
                 </div>
-            </uib-slide>
-        </uib-carousel>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" ng-model="noWrapSlides">
-                    Disable Slide Looping
-                </label>
+                </div>
             </div>
         </div>
-        <div class="col-md-6">
-            Interval, in milliseconds: <input type="number" class="form-control" ng-model="myInterval">
-            <br />Enter a negative number or 0 to stop the interval.
-        </div>
-    </div>
-</div>
+       
+
+
+
+
+
 
 
 
@@ -82,8 +77,8 @@
                             <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
                             <span class="sr-only">Next</span>
                         </a>
-                    </div>
-                </div>
+                    </div>-->
+                <!--</div>
             </div>
             <div class="col-sm-2"></div>
         </div>
@@ -92,7 +87,7 @@
         </div>
         <div class="row"></div>
     </div>
-                </div>
-            </div></div>-->-->-->
+                </div>-->
+            <!--</div></div>-->
 
 

@@ -30,7 +30,7 @@ namespace Hemelet
             var removeWords = new string[]
             {
                 "you","and","is","i","the","as","was","this","that","am","will","an","us","it","to","be",
-                "on","of","for","a","he","she","him","his","in","thus","hemlet","word","mine","give","take","made","whose",
+                "on","of","for","a","he","she","him","his","in","thus","hamlet","word","mine","give","take","made","whose",
                 "those","were","here","upon","what","take","than","into","when","where","been","more","could","does","might","done"
             };
 
@@ -63,7 +63,8 @@ namespace Hemelet
             var sortedWordList = (from item in array
                                   orderby item.Value descending
                                   select item)
-                                .ToDictionary(k => k.Key, k => k.Value);
+                          .ToDictionary(k => k.Key, k => k.Value);//todictionary will store the values back to itself
+            //You can sort a Dictionary by value and save it back to itself
 
             var count = 1;
 
@@ -71,14 +72,14 @@ namespace Hemelet
             {
                 Console.WriteLine("{0} occured {1} times", k.Key,k.Value);
                     count++;
-                    
-                    if(count > 60)
-                    {
-                        break;
-                    }
-                }
 
-                Console.ReadLine();
+                if (count > 60)
+                {
+                    break;
+                }
+            }
+
+            Console.ReadLine();
             }
 
         }

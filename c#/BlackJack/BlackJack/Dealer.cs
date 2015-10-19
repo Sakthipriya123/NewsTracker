@@ -6,62 +6,34 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    class Dealer
+    class Dealer : Game
     {
 
-        public Dictionary<string,int>  DealerHand { get; set; }
-        public int DealerScore { get; set; } 
-
-        public void DealCards(Dictionary<string, int> deck,int num)
+        public void DealerChoice(Dictionary<string, int> PlayDeck, int currentCard)
         {
-            var cardVal = num;
-
-            var CardToDeal = deck.ElementAt(cardVal);
-            this.DealerHand.Add(CardToDeal.Key, CardToDeal.Value);
-            this.CountedValue();
-            cardVal++;
-        }
-        public void DealerChoice(Dictionary<string, int> Playdeck,int currentCard)
-        {
-            if (DealerScore < 17)
+            if (PlayerScore < 17)
             {
-                this.DealCards(Playdeck, currentCard);
+                this.DealCards(PlayDeck, currentCard);
+                Console.Write("The Dealer hits and receives a card");
+                CardDealt = true;
             }
-            else if (DealerScore == 17 || DealerHand.Keys.Contains("Ace"))
+            else if (PlayerScore == 17 || PlayerHand.Keys.Contains("Ace"))
             {
-               this.DealCards(Playdeck,currentCard);
+                this.DealCards(PlayDeck, currentCard);
+                Console.Write("The Dealer hits and receives a card");
+                CardDealt = true;
             }
             else
             {
                 Console.Write("The Dealer is staying.");
+                CardDealt = false;
             }
         }
 
-        public void CountedValue()
-        {
-            this.DealerScore = 0;
-            foreach (var card in DealerHand)
-            {
-                if (card.Key.Contains("Ace"))
-                {
-                    if (this.DealerScore + 11 < 21)
-                    {
-                        this.DealerScore += 11;
-                    }
-                    else
-                    {
-                        this.DealerScore++;
-                    }
-                }
-                else
-                {
-                    this.DealerScore += card.Value;
-                }
-            }
-        }
         public Dealer()
         {
-            DealerHand = new Dictionary<string, int>();
+            PlayerHand = new Dictionary<string, int>();
         }
     }
+
 }

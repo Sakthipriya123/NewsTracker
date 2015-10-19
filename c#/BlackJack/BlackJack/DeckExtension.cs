@@ -78,29 +78,7 @@ namespace BlackJack
             }
             return shuffledDeck;
         }
-        //public static int CountedValue(this Dictionary<string, int> Hand, int score)
-        //{
-        //    int value = score;
-        //    foreach (var card in Hand)
-        //    {
-        //        if (card.Key.Contains("Ace"))
-        //        {
-        //            if (value + 11 < 21)
-        //            {
-        //                value += 11;
-        //            }
-        //            else {
-        //                value++;
-        //            }
-        //        }
-        //        else
-        //        {
-        //            value += card.Value;
-        //        }
-        //    }
-        //    return value;
-
-
+       
 
     }
 }

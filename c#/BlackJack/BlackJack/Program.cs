@@ -11,7 +11,10 @@ namespace BlackJack
         static void Main(string[] args)
         {
             var playGame = true;
-            do {
+
+            do
+            {
+
 
                 var Deck = new Dictionary<string, int>();
 
@@ -19,74 +22,103 @@ namespace BlackJack
 
                 var dealer = new Dealer();
 
-                var player = new Player();//Deal the initial 2 cards to each player
+                var user = new Player();
+
+                var gameOver = false;
 
                 var cardBeingDealt = 0;
+                //Deal the initial 2 cards to each player
 
-                var gameOver = 21;
 
-                for(int i = 0; i < 2; i++)
+                for (int i = 0; i < 2; i++)
                 {
                     dealer.DealCards(Deck, cardBeingDealt);
-                    cardBeingDealt++;
+                    if (dealer.CardDealt)
+                    {
+                        cardBeingDealt++;
+                    }
                 }
 
-                for(int i =0; i < 2; i++)
+                for (int i = 2; i < 4; i++)
                 {
-                    player.DealCards(Deck, cardBeingDealt);
-                    cardBeingDealt++;
+                    user.DealCards(Deck, cardBeingDealt);
+                    if (user.CardDealt)
+                    {
+                        cardBeingDealt++;
+                    }
                 }
 
-                foreach(var cards in Deck)
-                 {
-                    Console.WriteLine(player.UserScore);
-                    Console.WriteLine(player.UserHand);
-                    dealer.DealerChoice(Deck, cardBeingDealt);
-                    player.HitOrStay(Deck, cardBeingDealt, gameOver);
+                do
+                {
+                    Console.WriteLine(user.PlayerScore);
+                    //Console.WriteLine(dealer.PlayerScore);
+                    if (dealer.PlayerScore < 21 && user.PlayerScore < 21)
+                    {
+                        dealer.DealerChoice(Deck, cardBeingDealt);
+                        if (dealer.CardDealt)
+                        {
+                            cardBeingDealt++;
+                        }
+                         user.HitOrStay(Deck, cardBeingDealt);
+                            if (user.CardDealt)
+                            {
+                                cardBeingDealt++;
+                            }
+                        else
+                        {
+                            gameOver = true;
+                        }
+                      
+                        
+                    }
+                    else
+                    {
+                        Console.WriteLine("Dealer Score is {0}",dealer.PlayerScore);
+                        Console.WriteLine("Your Score is {0}",user.PlayerScore);
+                        if(user.PlayerScore > dealer.PlayerScore)
+                        {
+                            Console.WriteLine("Dealer Wins");
+                        }
+                         else if(user.PlayerScore > 21 || dealer.PlayerScore > 21)
+                        {
+                            Console.WriteLine("Bust");
+                        }
+                        else if(dealer.PlayerScore > user.PlayerScore)
+                        {
+                            Console.WriteLine("You Win");
+                        }
+                        Console.WriteLine("Game Over!");
+                        gameOver = true;
+                    }
+
 
                 }
-                
+                while (!gameOver);
+
+
+
 
                 playGame = false;
             }
+
 
             while (playGame != false);
 
 
 
-            //for (int i = 0; i < 3; i++)
-            //{
-            //    dealer.DealCards(Deck, i);
-            //}
-
-
-            //foreach (var cards in dealer.DealerHand)
-            //{
-            //    Console.WriteLine(cards.Key);
-            //}
-            //Console.WriteLine(dealer.DealerScore);
-
-            //var newCard = Dealer.DealCards(Deck, 1);
-
-            //dealer.DealerDeck.Add(newCard.Key.ToString(),newCard.Value);
-
-            //Console.WriteLine(dealer.DealerDeck);
 
 
 
-            //for (int i = 0;i < 52; i++)
+
+            //for (int i = 0; i < 52; i++)
             //{
             //    var newCard = Dealer.DealCards(Deck, i);
             //    Console.WriteLine(newCard);
-
             //}
 
             Console.ReadLine();
 
-            }
-
-
         }
-
     }
+}
 

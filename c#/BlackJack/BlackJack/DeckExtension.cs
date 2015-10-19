@@ -9,7 +9,7 @@ namespace BlackJack
     public static class DeckExtension
     {
 
-        private static void CreateSuits(string face, int value, ref Dictionary<string, int> deck)
+        private static void CreateSuits(string face, int value, Dictionary<string, int> deck)
         {
             var Suits = new String[]
             {"Hearts",
@@ -21,7 +21,7 @@ namespace BlackJack
             foreach (var suit in Suits)
             {
                 deck.Add(face + " of " + suit, value);
-            }
+             }
         }
 
         public static Dictionary<string, int> CreateDeck(this Dictionary<string, int> deck)
@@ -31,32 +31,32 @@ namespace BlackJack
             {
                 if (i == 1)
                 {
-                    CreateSuits("Ace", 1, ref deck);
+                    CreateSuits("Ace", 1, deck);
                 }
                 else if (i == 13)
                 {
-                    CreateSuits("King", 10, ref deck);
+                    CreateSuits("King", 10, deck);
                 }
                 else if (i == 12)
                 {
-                    CreateSuits("Queen", 10, ref deck);
+                    CreateSuits("Queen", 10,  deck);
                 }
                 else if (i == 11)
                 {
-                    CreateSuits("Jack", 10, ref deck);
+                    CreateSuits("Jack", 10, deck);
                 }
                 else
                 {
-                    CreateSuits(i.ToString(), i, ref deck);
+                    CreateSuits(i.ToString(), i, deck);
                 }
 
             }
 
-            return ShuffleDeck(ref deck);
+            return ShuffleDeck(deck);
 
         }
 
-        public static Dictionary<string, int> ShuffleDeck(ref Dictionary<string, int> deck)
+        public static Dictionary<string, int> ShuffleDeck(Dictionary<string, int> deck)
         {
             var rnd = new Random();
             //take current index value of dictionary items and change, if value has already been assigned, remove it from choices

@@ -6,16 +6,42 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    class Program
+    public class Program
     {
+        public enum Win
+        {
+            Dealer, Player, None
+
+        }
+
+         public static  Win CheckWinner(Player user, Dealer dealer )
+        {
+            if (dealer.PlayerScore > 21 && user.PlayerScore < 22)
+            {
+                return Win.Player;
+                
+            }
+            if (user.PlayerScore > 21 && dealer.PlayerScore < 22)
+            {
+                return Win.Dealer;
+
+            }
+            if(dealer.PlayerScore > user.PlayerScore)
+            {
+                return Win.Dealer;
+            }        
+            
+            return Win.None;
+
+          }
+
+
         static void Main(string[] args)
         {
             var playGame = true;
 
-            do
+                        do
             {
-
-
                 var Deck = new Dictionary<string, int>();
 
                 Deck = Deck.CreateDeck();
@@ -50,8 +76,8 @@ namespace BlackJack
 
                 do
                 {
-                    Console.WriteLine(user.PlayerScore);
-                    //Console.WriteLine(dealer.PlayerScore);
+
+                    user.ShowHand(user.PlayerHand);                                       
                     if (dealer.PlayerScore < 21 && user.PlayerScore < 21)
                     {
                         dealer.DealerChoice(Deck, cardBeingDealt);
@@ -66,28 +92,31 @@ namespace BlackJack
                             }
                         else
                         {
-                            gameOver = true;
+                            gameOver =true;
                         }
                       
                         
                     }
                     else
                     {
-                        Console.WriteLine("Dealer Score is {0}",dealer.PlayerScore);
+                        
                         Console.WriteLine("Your Score is {0}",user.PlayerScore);
-                        if(user.PlayerScore > dealer.PlayerScore)
-                        {
-                            Console.WriteLine("Dealer Wins");
-                        }
-                         else if(user.PlayerScore > 21 || dealer.PlayerScore > 21)
-                        {
-                            Console.WriteLine("Bust");
-                        }
-                        else if(dealer.PlayerScore > user.PlayerScore)
-                        {
-                            Console.WriteLine("You Win");
-                        }
-                        Console.WriteLine("Game Over!");
+                        Console.WriteLine("Dealer Score is {0}", dealer.PlayerScore);
+                        CheckWinner(user, dealer);
+
+                        //if(user.PlayerScore > dealer.PlayerScore)
+                        //{
+                        //    Console.WriteLine("Dealer Wins");
+                        //}
+                        // else if(user.PlayerScore > 21 || dealer.PlayerScore > 21)
+                        //{
+                        //    Console.WriteLine("Bust");
+                        //}
+                        //else if(dealer.PlayerScore > user.PlayerScore)
+                        //{
+                        //    Console.WriteLine("You Win");
+                        //}
+                        //Console.WriteLine("Game Over!");
                         gameOver = true;
                     }
 
@@ -102,7 +131,7 @@ namespace BlackJack
             }
 
 
-            while (playGame != false);
+            while (!playGame == false);
 
 
 

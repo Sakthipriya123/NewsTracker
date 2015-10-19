@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlackJack
 {
-    class Dealer : Game
+    public class Dealer : Game
     {
 
         public void DealerChoice(Dictionary<string, int> PlayDeck, int currentCard)

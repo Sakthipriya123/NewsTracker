@@ -1,0 +1,13 @@
+﻿<form>
+<a href="/Create" >Create</a>
+
+<ul>
+    <li ng-repeat="movie in controller.movies">
+        {{movie.title}}<a href="/Edit/{{movie.id}}">Edit</a>  <a href="/Delete">Delete</a>
+    </li>
+    
+</ul>
+
+</form>
+
+

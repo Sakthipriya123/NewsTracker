@@ -1,0 +1,15 @@
+﻿<ul>
+    <li ng-repeat="errors in controller.validationErrors">
+        {{errors}}
+    </li>
+</ul>
+
+<form ng-submit="controller.addMovie()">
+    Add Movies
+    <label>Movie Name</label>
+    <input ng-model="controller.moviesToCreate.title"/>
+    <label>Director Name</label>
+    <input ng-model="controller.moviesToCreate.director" />
+    <input type="submit" value="Submit">
+    
+</form>

@@ -3,12 +3,8 @@
     font-family: 'Segoe UI';
 
 }
-.category-description{
-    text-overflow:ellipsis;
-    width: 25%;
-    height: 100px;
-         
-}
+    
+
 #category-description{
     text-overflow:ellipsis;
     width: 25%;    

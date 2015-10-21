@@ -1,0 +1,77 @@
+﻿@{
+    Layout = null;
+}
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="NewsPage">
+<head>
+    <title></title>
+    <base href="/" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/news.css" rel="stylesheet" />
+    <link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
+    <link href="~/Content/bootswatch.min.css" rel="stylesheet" />
+    @*<style>
+            .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                width: 40%;
+                height: 60%;
+                margin: auto;
+            }
+        </style>*@
+
+
+    <link href="~/Content/Site.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron well">
+                    <h2>
+                        NewsReader
+                    </h2>
+                </div>
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a href="/HomePage">Home</a>
+                    </li>
+                    <li>
+                        <a href="/Catagories">Categories</a>
+                    </li>
+                    <li>
+                        <a href="/Publish">Publish</a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="/Signin">Sign in</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div></div>
+
+
+    <ng-view></ng-view>
+
+    <footer class="container-fluid">
+        <p>copyright by Priya</p>
+    </footer>
+
+
+   
+
+
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/angular-route.min.js"></script>
+    <script src="~/Scripts/angular-resource.min.js"></script>
+    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="~/ngAPP/app.js"></script>
+    <script src="~/ngAPP/controllers/controllers.js"></script>
+    <script src="~/ngApp/services/services.js"></script>
+
+</body>
+</html>

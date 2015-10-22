@@ -3,14 +3,18 @@
     font-family: 'Segoe UI';
 
 }
-#imagecss{
-    width: 150px; border: 1px solid #9325BC; padding: 10px;
-
+.imagecss{
+    opacity: 1; 
+    filter: alpha(opacity=100); 
+    }
+.imagecss:hover{
+    opacity: 0.3;
+     filter: alpha(opacity=30);
 }
-#imagecss:hover{
-    -moz-box-shadow: 0 0 10px #ccc;
-    -webkit-box-shadow: 0 0 10px #ccc;
-    box-shadow: 0 0 20px #ccc;
+
+.size{
+    width:140px;
+    height:140px;
 }
 
 #category-description{

@@ -18,3 +18,4 @@ var NewsPage;
         angular.module("NewsPage").service("newsServices", NewsServices);
     })(Services = NewsPage.Services || (NewsPage.Services = {}));
 })(NewsPage || (NewsPage = {}));
+//# sourceMappingURL=services.js.map

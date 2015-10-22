@@ -47,3 +47,4 @@ var NewsPage;
         angular.module('NewsPage').controller('NewsDetailController', NewsDetailController);
     })(Controllers = NewsPage.Controllers || (NewsPage.Controllers = {}));
 })(NewsPage || (NewsPage = {}));
+//# sourceMappingURL=controllers.js.map

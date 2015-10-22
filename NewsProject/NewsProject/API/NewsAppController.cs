@@ -26,9 +26,15 @@ namespace NewsProject.API
         //}
 
         //// GET: api/NewsApp/5
-        public IEnumerable<News> Get(int id)
+        public IHttpActionResult Get(int id)
         {
-            return from n in _db.News where n.Id == id select n;
+            var results = (from n in _db.News where n.Id == id select n).FirstOrDefault();
+            if(results == null)
+            {
+                return NotFound();
+            }
+            return Ok(results);
+
         }
 
         //// POST: api/NewsApp
@@ -37,17 +43,18 @@ namespace NewsProject.API
 
         //    //return;
         //}
-  
-        //// PUT: api/NewsApp/5
-        //public string Put(int id, News value)
-        //{
-        //     var news = _news.Find(m => m.Id == id);
-        //    news.Title = value.Title;
-        //    news.Image = value.Image;
-        //    news.Author = value.Author;
-        //    news.Description = value.Description;
 
-        //    return news.Title + news.Image + news.Author + news.Description;
+        //// PUT: api/NewsApp/5
+        //public IEnumerable<News> Put(int id, News value)
+        //{
+        //    return from n in _db.News where n.Id == id select n;
+        //    //var news = _news.Find(m => m.Id == id);
+        //    //news.Title = value.Title;
+        //    //news.Image = value.Image;
+        //    //news.Author = value.Author;
+        //    //news.Description = value.Description;
+
+        //    //return news.Title + news.Image + news.Author + news.Description;
         //}
 
         //// DELETE: api/NewsApp/5

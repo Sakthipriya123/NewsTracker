@@ -20,7 +20,7 @@ namespace NewsProject.Migrations
             {
                new News
             {
-                Id = 1,
+                
                 Image = "https://cdn.flipboard.com/flipboard.com/ac738020f2e7cf9dc7fe366a1994adebf2f4feb6/large.jpg",
                 Title = "Keuchel sharp, Astros beat Yankees 3-0 in AL wild-card game",
                 Author = "Kwame Opam",
@@ -30,7 +30,7 @@ namespace NewsProject.Migrations
             },
              new News
              {
-                 Id = 2,
+                
                  Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
                  Title = "Facebook Is Following You",
                  Author = "Russell Brandom",
@@ -40,7 +40,7 @@ namespace NewsProject.Migrations
              },
               new News
               {
-                  Id = 3,
+                  
                   Image = "http://o.aolcdn.com/hss/storage/midas/abca7b756bb17b5015c4a893cf22dc7b/202759823/Surface+Pro+4+fullbleed.jpg",
                   Title = "UK pricing for Microsoft's Surface Pro 4, Lumia 950 phones ",
                   Author = "Dan Seifert",
@@ -50,7 +50,7 @@ namespace NewsProject.Migrations
               },
                new News
                {
-                   Id = 4,
+                  
                    Image = "https://cdn.flipboard.com/businessinsider.com/558fa02299c854100961653524f142ec96cd6ea0/original.jpg",
                    Title = "Google has bought abcdefghijklmnopqrstuvwxyz.com",
                    Author = "Alexei Oreskovic",
@@ -60,7 +60,7 @@ namespace NewsProject.Migrations
                },
                 new News
                 {
-                    Id = 5,
+                    
                     Image = "https://cdn.flipboard.com/businessinsider.com/558fa02299c854100961653524f142ec96cd6ea0/original.jpg",
                     Title = "Google has bought abcdefghijklmnopqrstuvwxyz.com",
                     Author = "Alexei Oreskovic",
@@ -70,7 +70,7 @@ namespace NewsProject.Migrations
                 },
                  new News
                  {
-                     Id = 6,
+                    
                      Image = "https://cdn.flipboard.com/businessinsider.com/558fa02299c854100961653524f142ec96cd6ea0/original.jpg",
                      Title = "Google has bought abcdefghijklmnopqrstuvwxyz.com",
                      Author = "Alexei Oreskovic",
@@ -80,7 +80,7 @@ namespace NewsProject.Migrations
                  },
                   new News
                   {
-                      Id = 7,
+                      
                       Image = "https://cdn.flipboard.com/businessinsider.com/558fa02299c854100961653524f142ec96cd6ea0/original.jpg",
                       Title = "Google has bought abcdefghijklmnopqrstuvwxyz.com",
                       Author = "Alexei Oreskovic",
@@ -90,7 +90,7 @@ namespace NewsProject.Migrations
                   },
                    new News
                    {
-                       Id = 8,
+                       
                        Image = "https://cdn.flipboard.com/businessinsider.com/558fa02299c854100961653524f142ec96cd6ea0/original.jpg",
                        Title = "Google has bought abcdefghijklmnopqrstuvwxyz.com",
                        Author = "Alexei Oreskovic",
@@ -100,12 +100,12 @@ namespace NewsProject.Migrations
                    }
             };
 
-            context.News.AddOrUpdate(n => n.Image, news);
+           // context.News.AddOrUpdate(n => n.Image, news);
             context.News.AddOrUpdate(n => n.Title, news);
-            context.News.AddOrUpdate(n => n.Author, news);
-            context.News.AddOrUpdate(n => n.Description, news);
-            context.News.AddOrUpdate(n => n.Category, news);
-            context.News.AddOrUpdate(n => n.FullArticle, news);
+            //context.News.AddOrUpdate(n => n.Author, news);
+            //context.News.AddOrUpdate(n => n.Description, news);
+            //context.News.AddOrUpdate(n => n.Category, news);
+            //context.News.AddOrUpdate(n => n.FullArticle, news);
         }
     }
 }

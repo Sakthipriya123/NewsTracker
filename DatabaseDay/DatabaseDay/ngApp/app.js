@@ -12,6 +12,21 @@ var MyApp;
             controller: MyApp.Controllers.AboutController,
             controllerAs: 'controller'
         })
+            .when('/add', {
+            templateUrl: '/ngApp/views/add.html',
+            controller: MyApp.Controllers.AddController,
+            controllerAs: 'controller'
+        })
+            .when('/edit/:id', {
+            templateUrl: '/ngApp/views/edit.html',
+            controller: MyApp.Controllers.EditController,
+            controllerAs: 'controller'
+        })
+            .when('/delete/:id', {
+            templateUrl: '/ngApp/views/delete.html',
+            controller: MyApp.Controllers.DeleteController,
+            controllerAs: 'controller'
+        })
             .otherwise({
             templateUrl: '/ngApp/views/notFound.html'
         });

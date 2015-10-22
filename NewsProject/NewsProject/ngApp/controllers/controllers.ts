@@ -54,8 +54,7 @@
 
         constructor(private newsServices: NewsPage.Services.NewsServices, $routeParams: ng.route.IRouteParamsService, private $location: ng.ILocationService) {
             this.article = this.newsServices.getArticle($routeParams['id']);
-
-     
+                
             }
     }
       

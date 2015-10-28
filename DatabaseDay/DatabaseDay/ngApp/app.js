@@ -33,4 +33,3 @@ var MyApp;
         $locationProvider.html5Mode(true);
     });
 })(MyApp || (MyApp = {}));
-//# sourceMappingURL=app.js.map

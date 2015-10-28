@@ -1,0 +1,3 @@
+DBCC CHECKIDENT ('Categories', RESEED, 0);
+
+https://github.com/codercamps/CoderCamps-SPA/releases

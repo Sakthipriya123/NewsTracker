@@ -1,38 +1,50 @@
-﻿<div class="container-fluid">
+﻿<br/><div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
             <div class="col-md-3">
             </div>
             <div class="col-md-7">
-                <form role="form">
-                    <div class="form-group">
-
-                        <label for="exampleInputEmail1">
-                            Title
-                        </label>
-                        <input class="form-control" id="exampleInputEmail1" />
-                    </div>
-                    <div class="form-group">
-
-                        <label for="exampleInputPassword1">
-                            Content
-                        </label>
-                        <input class="form-control" id="exampleInputPassword1" />
-                    </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" /> Image
-                            </label>
+                <div class="bs-example">
+                    <form class="form-horizontal" ng-submit="vm.save()">
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Title</label>
+                            <div class="col-xs-10">
+                                <input  class="form-control" ng-model="vm.addArticle.title" >
+                            </div>
                         </div>
-
-                        <input type="file" name="Choose Image" id="exampleInputFile" />
-                    </div>
-
-                    <button type="submit" class="btn btn-default">
-                        Submit
-                    </button>
-                </form>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Image</label>
+                            <div class="col-xs-10">
+                                <input class="form-control" ng-model="vm.addArticle.image">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Abstract</label>
+                            <div class="col-xs-10">
+                                <textarea class="form-control" rows="5" id="comment" ng-model="vm.addArticle.description"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-xs-2">Content</label>
+                            <div class="col-xs-10">
+                                <textarea class="form-control" rows="10" cols="10" id="comment" ng-model="vm.addArticle.fulldescription"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                               <label class="control-label col-xs-2">Categories</label>
+                                    <div class="dropdown">
+                                  <select class="form-control" id="sel1" ng-model="vm.addArticle.selectedCategory" ng-options="category.categoryName for category in vm.categories">
+                                        </select>
+                                     
+                                      </div>
+                                </div>
+                             <div class="form-group">
+                            <div class="col-xs-offset-2 col-xs-2">
+                                <button type="submit"><img alt="Bootstrap Image Preview" src="http://www.clker.com/cliparts/Z/r/I/W/D/j/add-button-png-hi.png" class="img-rounded button" /></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="col-md-2"></div>
         </div>

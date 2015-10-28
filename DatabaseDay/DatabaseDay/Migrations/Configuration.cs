@@ -10,7 +10,7 @@ namespace DatabaseDay.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
         }
 
         protected override void Seed(DatabaseDay.Models.ApplicationDbContext context)

@@ -1,4 +1,6 @@
-﻿<button class="btn" ng-click="open()">Sign up</button>
+﻿ <h3>new to NewsBoard</h3>
+<a href="/Signup">Sign Up</a>
+<!--<button class="btn" ng-click="open()">Sign up</button>-->
 
 <div modal="showModal" close="cancel()">
     <div class="modal-header">
@@ -9,23 +11,24 @@
             <div class="row">
                 <div class="col-sm-3"></div>
                 <div class="col-sm-5">
-                    <form role="form">
+                    <form role="form" ng-submit="controller.login()">
                         <div class="form-group">
-
+                            Sign In
                             <label for="exampleInputEmail1">
                                 Email address
                             </label>
-                            <input class="form-control" id="exampleInputEmail1" type="email" />
+                            <input  ng-model="controller.loginUser.userName" class="form-control" id="exampleInputEmail1" type="email" />
 
                             <label for="exampleInputPassword1">
                                 Password
                             </label>
-                            <input class="form-control" id="exampleInputPassword1" type="password" />
+                            <input ng-model="controller.loginUser.password" class="form-control" id="exampleInputPassword1" type="password" />
                         </div>
 
                         <button class="btn btn-default" type="submit">
-                            Submit
+                            SignIn
                         </button>
+                        
                     </form>
                 </div>
                 <div class="col-sm-4"></div>
@@ -35,4 +38,3 @@
     </div>
 
 </div>
-

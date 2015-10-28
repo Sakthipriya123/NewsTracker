@@ -22,6 +22,7 @@ namespace NewsProject.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public IDbSet<News> News { get; set; }
+        public IDbSet<Category> Categories { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

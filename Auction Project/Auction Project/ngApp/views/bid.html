@@ -1,0 +1,15 @@
+﻿<form ng-submit="controller.save()">
+    <div>
+        {{controller.auction.name}}
+        <label>Name</label>
+        <input ng-model="controller.addBid.biddername" />
+    </div>
+    <div>
+        <label>BidAmount</label>
+        <input ng-model="controller.addBid.bidamount" />
+    </div>
+
+    <input type="submit" value="Enter" />
+
+
+</form>

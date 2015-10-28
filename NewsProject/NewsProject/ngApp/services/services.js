@@ -5,12 +5,32 @@ var NewsPage;
         var NewsServices = (function () {
             function NewsServices($resource) {
                 this.newsResource = $resource('/api/NewsApp/:id');
+                this.categoryResource = $resource('/api/categories/:id');
+                this.adminResource = $resource('/api/admin/:id');
             }
             NewsServices.prototype.listNews = function () {
                 return this.newsResource.query();
             };
+            NewsServices.prototype.listCategories = function () {
+                return this.categoryResource.query();
+            };
+            NewsServices.prototype.save = function (news) {
+                return this.newsResource.save(news).$promise;
+            };
             NewsServices.prototype.getArticle = function (id) {
                 return this.newsResource.get({ id: id });
+            };
+            NewsServices.prototype.getCategories = function () {
+                return this.categoryResource.query();
+            };
+            NewsServices.prototype.getCategory = function (id) {
+                return this.categoryResource.query({ id: id });
+            };
+            NewsServices.prototype.change = function (data) {
+                return this.categoryResource.get(data).$promise;
+            };
+            NewsServices.prototype.listnews = function () {
+                return this.adminResource.query();
             };
             return NewsServices;
         })();

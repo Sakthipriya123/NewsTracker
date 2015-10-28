@@ -1,0 +1,32 @@
+﻿<!--<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+
+            <h3>{{vm.scategories.categoryname}}</h3>
+            <div>{{vm.scategories.news}}</div>
+
+            <hr />
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</div>-->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 heading-primary" data-ng-init="vm.scategories.news">
+            <div ng-repeat="publish in vm.scategories" class="block grid-parent col-md-4 thumbnail" ng-if="$index % 1 == 0 " id="category-description">
+                <a href="/Details/{{publish.id}}">
+                    <img ng-src="{{publish.image}}"
+                         style="width: 300px; height: 300px" />
+                    <h4 id="title">{{publish.title}}</h4><h5 id="author">By {{publish.author}}</h5>
+                </a><p id="desc">{{publish.description}}</p>
+                <em><strong>{{publish.categoryname}}</strong></em>
+
+                <hr />
+            </div>
+        </div>
+    </div>
+</div>

@@ -44,7 +44,7 @@ namespace NewsProject.Providers
             ClaimsIdentity cookiesIdentity = await user.GenerateUserIdentityAsync(userManager,
                 CookieAuthenticationDefaults.AuthenticationType);
 
-            AuthenticationProperties properties = CreateProperties(user.UserName);
+            AuthenticationProperties properties = CreateProperties(user);  // modified by Stephen
             AuthenticationTicket ticket = new AuthenticationTicket(oAuthIdentity, properties);
             context.Validated(ticket);
             context.Request.Context.Authentication.SignIn(cookiesIdentity);
@@ -75,7 +75,7 @@ namespace NewsProject.Providers
         {
             if (context.ClientId == _publicClientId)
             {
-                Uri expectedRootUri = new Uri(context.Request.Uri, "/");
+                Uri expectedRootUri = new Uri(context.Request.Uri, "/externalLogin"); // modified by Stephen
 
                 if (expectedRootUri.AbsoluteUri == context.RedirectUri)
                 {
@@ -86,12 +86,19 @@ namespace NewsProject.Providers
             return Task.FromResult<object>(null);
         }
 
-        public static AuthenticationProperties CreateProperties(string userName)
+        public static AuthenticationProperties CreateProperties(ApplicationUser user)
         {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
-                { "userName", userName }
+                { "userName", user.UserName },
             };
+
+            // add claims (modified by Stephen)
+            foreach (var claim in user.Claims)
+            {
+                data.Add("claim_" + claim.ClaimType, claim.ClaimValue);
+            }
+
             return new AuthenticationProperties(data);
         }
     }

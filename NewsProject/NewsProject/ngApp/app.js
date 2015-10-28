@@ -15,21 +15,42 @@ var NewsPage;
             templateUrl: '/ngApp/views/Publish.html',
             controller: 'PublishController as vm'
         })
-            .when('/Catagories', {
-            templateUrl: '/ngApp/views/Catagories.html',
-            controller: 'PublishController as vm'
-        })
             .when('/Signin', {
             templateUrl: '/ngApp/views/Signin.html',
-            controller: 'SignInController as vm'
+            controller: NewsPage.Controllers.LoginController,
+            controllerAs: 'controller'
         })
-            .when('/Catagories', {
+            .when('/Categories', {
             templateUrl: '/ngApp/views/Categories.html',
-            controller: 'NewsListController as vm'
+            controller: 'CategoriesController as vm'
         })
             .when('/Details/:id', {
             templateUrl: '/ngApp/views/Details.html',
             controller: 'NewsDetailController as vm'
+        })
+            .when('/SingleCategory/:id', {
+            templateUrl: '/ngApp/views/SingleCategory.html',
+            controller: 'SingleCategoriesController as vm'
+        })
+            .when('/Admin', {
+            templateUrl: '/ngApp/views/Admin.html',
+            controller: NewsPage.Controllers.AdminController,
+            controllerAs: 'controller'
+        })
+            .when('/Signup', {
+            templateUrl: '/ngApp/views/Signup.html',
+            controller: NewsPage.Controllers.RegisterController,
+            controllerAs: 'controller'
+        })
+            .when('/externalLogin', {
+            templateUrl: '/ngApp/views/externalLogin.html',
+            controller: NewsPage.Controllers.ExternalLoginController,
+            controllerAs: 'controller'
+        })
+            .when('/externalRegister', {
+            templateUrl: '/ngApp/views/externalRegister.html',
+            controller: NewsPage.Controllers.ExternalRegisterController,
+            controllerAs: 'controller'
         })
             .otherwise('/');
         $locationProvider.html5Mode(true);
@@ -46,7 +67,7 @@ var NewsPage;
             },
             response: function (response) {
                 if (response.status === 401) {
-                    $location.path('/Products.json');
+                    $location.path('/Signin');
                 }
                 return response || $q.when(response);
             }

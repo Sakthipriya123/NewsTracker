@@ -3,6 +3,15 @@
     font-family: 'Segoe UI';
 
 }
+
+.name{
+  font-weight: bold;
+  text-align: left;
+}
+
+.value{
+    text-align:left;
+}
 .imagecss{
     opacity: 1; 
     filter: alpha(opacity=100); 
@@ -15,6 +24,10 @@
 .size{
     width:140px;
     height:140px;
+}
+.button{
+    width:40px;
+    height:40px;
 }
 
 #category-description{

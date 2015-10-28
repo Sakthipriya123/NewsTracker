@@ -10,9 +10,7 @@
         }
        
     }
-
-
-    
+ 
 
     export class AddController {
         private addMovies;
@@ -26,16 +24,9 @@
             });
         }
 
-
-
-        constructor(private movieService: MyApp.Services.MovieService, private $location: angular.ILocationService) {
-
-
-
+         constructor(private movieService: MyApp.Services.MovieService, private $location: angular.ILocationService) {
 
         }
-
-
     }
 
 

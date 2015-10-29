@@ -60,7 +60,7 @@
 
         constructor(private newsServices: NewsPage.Services.NewsServices, private $location: angular.ILocationService, private $routeParams: ng.route.IRouteParamsService) {
             this.scategories = this.newsServices.getCategory($routeParams['id']);
-                       
+         
         }
 
     }

@@ -27,7 +27,7 @@
             return this.categoryResource.query();
         }
         public getCategory(id: number) {
-            return this.categoryResource.query({id : id });
+            return this.categoryResource.get({id : id });
         }
 
         public change(data) {
@@ -44,7 +44,7 @@
             this.categoryResource = $resource('/api/categories/:id');
             this.adminResource = $resource('/api/admin/:id');       
 
-
+           
         }
 
     }

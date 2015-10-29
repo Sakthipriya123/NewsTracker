@@ -20,14 +20,14 @@ namespace NewsProject.API
             this._categoryService = categoryService;
 
         }
-
+        
         public IEnumerable<Category> Get()
         {
             //var news = _db.Categories.Include(c => c.News).Where(a => a.CategoryName.Equals("Sports"));
             return _categoryService.ListCategories();
         }
 
-
+        [Authorize]
         public IHttpActionResult Get(int id)
         {
             var news = _categoryService.GetNews(id);

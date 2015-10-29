@@ -1,0 +1,8 @@
+﻿<ul>
+    <li ng-repeat="movie in controller.movies">
+        {{movie.title}}
+    </li>
+</ul>
+
+<button class="button" ngf-select="controller.upload($file)">Upload</button>
+<progress ng-attr-value="{{controller.loaded}}" max="{{controller.max}}"></progress>

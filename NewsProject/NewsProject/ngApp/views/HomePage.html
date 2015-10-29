@@ -1,20 +1,20 @@
 ﻿
-<div class="container-fluid">
+<div ng-show ="account.isLoggedIn()"class="container-fluid">
     <div class="row">
-        <div class="col-md-12 heading-primary" data-ng-init="vm.news">
-            <div ng-repeat="publish in vm.news" class="block grid-parent col-md-4 thumbnail" ng-if="$index % 1 == 0 " id="category-description">
+        <!--<div class="col-md-12 heading-primary" data-ng-init="vm.news">-->
+            <div ng-repeat="publish in vm.news" class="block grid-parent col-md-4 thumbnail" ng-if="$index % 4 == 0 " id="category-description">
                 <a href="/Details/{{publish.id}}">
                     <img ng-src="{{publish.image}}"
                          style="width: 300px; height: 300px" />
                     <h4 id="title">{{publish.title}}</h4><h5 id="author">By {{publish.author}}</h5>
                 </a><p id="desc">{{publish.description}}</p>
-                <h4 ng-model="category.categoryname"><em><strong>{{category.categoryname}}</strong></em></h4>
+                <h4><em><strong>{{publish.categoryName}}</strong></em></h4>
 
                 <hr />
             </div>
         </div>
     </div>
-</div>
+
 
 
 

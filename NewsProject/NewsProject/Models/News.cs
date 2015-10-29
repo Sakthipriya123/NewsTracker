@@ -15,7 +15,6 @@ namespace NewsProject.Models
         public string Author { get; set; }
         public string Description { get; set; }
         public string FullArticle { get; set; }
-        [JsonIgnore]
         public Category Category { get; set; }
     }
 }

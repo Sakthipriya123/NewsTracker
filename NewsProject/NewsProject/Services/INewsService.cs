@@ -8,6 +8,6 @@ namespace NewsProject.Services
     {
         void AddNews(News news);
         News GetNews(int id);
-        IList<News> ListNews();
+        IList<NewsListView> ListNews();
     }
 }

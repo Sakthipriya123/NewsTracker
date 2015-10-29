@@ -14,15 +14,17 @@
                     <form role="form" ng-submit="controller.login()">
                         <div class="form-group">
                             Sign In
-                            <label for="exampleInputEmail1">
-                                Email address
-                            </label>
-                            <input  ng-model="controller.loginUser.userName" class="form-control" id="exampleInputEmail1" type="email" />
+                            <div>
+                                <label  for="exampleInputEmail1">
+                                    Email address
+                                </label>
+                                <input ng-model="controller.loginUser.userName" class="form-control" id="exampleInputEmail1" type="email" />
 
-                            <label for="exampleInputPassword1">
-                                Password
-                            </label>
-                            <input ng-model="controller.loginUser.password" class="form-control" id="exampleInputPassword1" type="password" />
+                                <label for="exampleInputPassword1">
+                                    Password
+                                </label>
+                                <input ng-model="controller.loginUser.password" class="form-control" id="exampleInputPassword1" type="password" />
+                            </div>
                         </div>
 
                         <button class="btn btn-default" type="submit">

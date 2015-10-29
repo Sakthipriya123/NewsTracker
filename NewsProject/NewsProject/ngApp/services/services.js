@@ -24,7 +24,7 @@ var NewsPage;
                 return this.categoryResource.query();
             };
             NewsServices.prototype.getCategory = function (id) {
-                return this.categoryResource.query({ id: id });
+                return this.categoryResource.get({ id: id });
             };
             NewsServices.prototype.change = function (data) {
                 return this.categoryResource.get(data).$promise;

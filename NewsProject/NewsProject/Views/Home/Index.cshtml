@@ -23,60 +23,67 @@
 </head>
 <body ng-controller="AccountController as account">
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="jumbotron well">
-                    <h2>
-                        NewsReader
-                    </h2>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header pull-left">
+                <a class="navbar-brand" href="#">NewsBoard</a>
                 </div>
-                <ul class="nav nav-tabs">
-                    <li>
-                        <a href="/HomePage">Home</a>
-                    </li>
-                    <li>
-                        <a href="/Categories">Categories</a>
-                    </li>
-                    <li ng-if="account.getClaim('ViewNews')">
-                        <a href="/Publish">Publish</a>
-                    </li>
-                    <li class="pull-right">
-                        <a href="/Signin" ng-show="!account.isLoggedIn()">Sign in</a>
-                    </li>
-                    <li class="pull-right">
+              <ul class="nav nav-tabs pull-right" id="hometabs">
+                <li>
+                    <a href="/HomePage">Home</a>
+                </li>
+                <li>
+                    <a href="/Categories">Categories</a>
+                </li>
+                <li ng-if="account.getClaim('ViewNews')">
+                    <a href="/Publish">Publish</a>
+                </li>
+                <li class="pull-right">
+                    <a href="/Signin" ng-show="!account.isLoggedIn()">Sign in</a>
+                </li>
+                <li class="pull-right">
                     <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a>
-                        </li>
-                </ul>
+                </li>
+            </ul>
+                </div>
+        </div>
+    
+    <br/>          
+
+
+
+
+            <ng-view></ng-view>
+    <div ng-show="!account.isLoggedIn()" class="container">
+        <div class="container">
+            <a href="http://fortune.com/2015/10/29/theranos-board-restructure/">
+                <div class="jumbotron">
+                    <h4 ng-class="pull-down">Theranos restructures board amid questions about its technology</h4><p>by  Kia Kokalitcheva</p>
+                    </div>
+            </a>
             </div>
         </div>
-
-    </div>
-    <div></div>
-
-
-    <ng-view></ng-view>
-
-    <footer class="container-fluid">
-        <p>copyright by Priya</p>
-    </footer>
+    
+            <footer class="container-fluid">
+                <p>copyright</p>
+            </footer>
 
 
-   
 
 
-    <script src="~/Scripts/angular.min.js"></script>
-    <script src="~/Scripts/angular-route.min.js"></script>
-    <script src="~/Scripts/angular-resource.min.js"></script>
-    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
-    <script src="~/ngAPP/app.js"></script>
-    <script src="~/ngAPP/controllers/controllers.js"></script>
-    <script src="~/ngApp/controllers/accountController.js"></script>
-    <script src="~/ngApp/services/services.js"></script>
-    <script src="~/ngApp/services/accountService.js"></script>
+
+            <script src="~/Scripts/angular.min.js"></script>
+            <script src="~/Scripts/angular-route.min.js"></script>
+            <script src="~/Scripts/angular-resource.min.js"></script>
+            <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+            <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+            <script src="~/ngAPP/app.js"></script>
+            <script src="~/ngAPP/controllers/controllers.js"></script>
+            <script src="~/ngApp/controllers/accountController.js"></script>
+            <script src="~/ngApp/services/services.js"></script>
+            <script src="~/ngApp/services/accountService.js"></script>
 
 </body>
 </html>

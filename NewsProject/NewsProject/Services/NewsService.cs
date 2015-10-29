@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
+
 namespace NewsProject.Services
 {
     public class NewsService : INewsService
@@ -27,9 +28,17 @@ namespace NewsProject.Services
             return _repo.Find<News>(id);
         }
 
-        public IList<News> ListNews()
+        public IList<NewsListView> ListNews()
         {
-            IList<News> news = _repo.Query<News>().ToList();
+           var  news = _repo.Query<News>().Include(c => c.Category).Select(n => new NewsListView {
+                 Id = n.Id,
+                 Title=n.Title,
+                 Image = n.Image,                
+                 Author = n.Author,
+                 Description =n.Description,
+               CategoryName = n.Category.CategoryName,
+
+           }).ToList();
             return news;
         }
     }

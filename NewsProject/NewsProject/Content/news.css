@@ -1,7 +1,13 @@
 ﻿body {
     text-align: center;
     font-family: 'Segoe UI';
+    
 
+}
+.jumbotron {
+background-image: url(https://fortunedotcom.files.wordpress.com/2015/10/gettyimages-491569536.jpg?quality=80&w=840&h=485&crop=1);
+background-size: cover;
+height: 80%;
 }
 
 .name{

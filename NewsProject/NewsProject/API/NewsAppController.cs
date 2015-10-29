@@ -26,10 +26,10 @@ namespace NewsProject.API
         {
 
             var user = this.User as ClaimsPrincipal;
-            if (!user.HasClaim("ViewNews", "true"))
-            {
-                return Unauthorized();
-            }
+            //if (!user.HasClaim("ViewNews", "true"))
+            //{
+            //    return Unauthorized();
+            //}
 
             return Ok(this._newsService.ListNews());
         }

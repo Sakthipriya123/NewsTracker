@@ -1,7 +1,7 @@
 ﻿namespace NewsPage {
     'use strict';
 
-    angular.module('NewsPage', ['ngRoute', 'ngResource', 'ui.bootstrap']).config(
+    angular.module('NewsPage', ['ngRoute', 'ngResource', 'ui.bootstrap','ngFileUpload']).config(
         (
             $routeProvider: ng.route.IRouteProvider,
             $locationProvider: ng.ILocationProvider
@@ -27,15 +27,18 @@
                       templateUrl: '/ngApp/views/Signin.html',
                       controller: NewsPage.Controllers.LoginController,
                 controllerAs: 'controller'
-                })
+                  })
+                .when('/Logout', {
+                    templateUrl: '/',
+                    })
                 .when('/Categories', {
                     templateUrl: '/ngApp/views/Categories.html',
                     controller: 'CategoriesController as vm'
                 })
-                .when('/Details/:id', {
-                    templateUrl: '/ngApp/views/Details.html',
-                    controller: 'NewsDetailController as vm'
-                })
+                //.when('/Details/:id', {
+                //    templateUrl: '/ngApp/views/Details.html',
+                //    controller: 'NewsDetailController as vm'
+                //})
                 .when('/SingleCategory/:id', {
                     templateUrl: '/ngApp/views/SingleCategory.html',
                     controller: 'SingleCategoriesController as vm'

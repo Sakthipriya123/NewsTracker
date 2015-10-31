@@ -4,7 +4,7 @@ var NewsPage;
     (function (Services) {
         var NewsServices = (function () {
             function NewsServices($resource) {
-                this.newsResource = $resource('/api/NewsApp/:id');
+                this.newsResource = $resource('/api/newsapp/:id');
                 this.categoryResource = $resource('/api/categories/:id');
                 this.adminResource = $resource('/api/admin/:id');
             }
@@ -18,16 +18,13 @@ var NewsPage;
                 return this.newsResource.save(news).$promise;
             };
             NewsServices.prototype.getArticle = function (id) {
-                return this.newsResource.get({ id: id });
+                return this.newsResource.get({ id: id }).$promise;
             };
             NewsServices.prototype.getCategories = function () {
                 return this.categoryResource.query();
             };
             NewsServices.prototype.getCategory = function (id) {
                 return this.categoryResource.get({ id: id });
-            };
-            NewsServices.prototype.change = function (data) {
-                return this.categoryResource.get(data).$promise;
             };
             NewsServices.prototype.listnews = function () {
                 return this.adminResource.query();

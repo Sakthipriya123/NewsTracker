@@ -21,7 +21,7 @@ namespace NewsProject.API
 
         }
         
-        public IEnumerable<Category> Get()
+        public IEnumerable<CategoryView> Get()
         {
             //var news = _db.Categories.Include(c => c.News).Where(a => a.CategoryName.Equals("Sports"));
             return _categoryService.ListCategories();

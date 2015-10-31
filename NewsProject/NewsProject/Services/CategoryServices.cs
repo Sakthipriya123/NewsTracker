@@ -8,7 +8,7 @@ using System.Web.Http;
 
 namespace NewsProject.Services
 {
-    public class CategoryServices : ICategoryServices
+    public class CategoryServices :  ICategoryServices
     {
         private IGenericRepository _repo;
 
@@ -19,9 +19,9 @@ namespace NewsProject.Services
 
         }
         [Authorize]
-        public IList<Category> ListCategories()
+        public IList<CategoryView> ListCategories()
         {
-            IList<Category> category= _repo.Query<Category>().Include(c => c.News).ToList();
+            IList<CategoryView> category= _repo.Query<Category>().ToList().Select(c => new CategoryView { Id = c.Id, CategoryName = c.CategoryName}).ToList();
             return category;
         }
 
@@ -35,9 +35,7 @@ namespace NewsProject.Services
                 CategoryName = category.CategoryName,
                 Id = category.Id,
                 News = category.News.Select(c => new NewsView { Id = c.Id,Title = c.Title,Image = c.Image, Author = c.Author,Description=c.Description }).ToList(),
-               
-
-
+             
             };
             return categoryview;
             

@@ -1,7 +1,7 @@
 var NewsPage;
 (function (NewsPage) {
     'use strict';
-    angular.module('NewsPage', ['ngRoute', 'ngResource', 'ui.bootstrap']).config(function ($routeProvider, $locationProvider) {
+    angular.module('NewsPage', ['ngRoute', 'ngResource', 'ui.bootstrap', 'ngFileUpload']).config(function ($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
             templateUrl: '/ngApp/views/HomePage.html',
@@ -20,13 +20,12 @@ var NewsPage;
             controller: NewsPage.Controllers.LoginController,
             controllerAs: 'controller'
         })
+            .when('/Logout', {
+            templateUrl: '/',
+        })
             .when('/Categories', {
             templateUrl: '/ngApp/views/Categories.html',
             controller: 'CategoriesController as vm'
-        })
-            .when('/Details/:id', {
-            templateUrl: '/ngApp/views/Details.html',
-            controller: 'NewsDetailController as vm'
         })
             .when('/SingleCategory/:id', {
             templateUrl: '/ngApp/views/SingleCategory.html',

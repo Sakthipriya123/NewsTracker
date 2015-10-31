@@ -1,6 +1,36 @@
-﻿ <h3>new to NewsBoard</h3>
+﻿<div class="container divbody">
+    <div class="row">
+        <div class="Absolute-Center is-Responsive">
+            <div id="logo-container"></div>
+            <div class="col-md-4"></div>
+            <div class="col-sm-4 col-md-10 col-md-offset-1">
+                <form id="loginForm" ng-submit="controller.login()">
+                       <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input ng-model="controller.loginUser.userName" class="form-control" type="text" name='username' placeholder="Email Address" />
+                    </div>
+                    <div class="form-group input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input ng-model="controller.loginUser.password" class="form-control" type="password" name='password' placeholder="password" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-def btn-block">Signin</button>
+                           </div>
+                    </form>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+</div> 
+
+
+
+
+
+
+<!--<h3>new to NewsBoard</h3>
 <a href="/Signup">Sign Up</a>
-<!--<button class="btn" ng-click="open()">Sign up</button>-->
+<button class="btn" ng-click="open()">Sign up</button>
 
 <div modal="showModal" close="cancel()">
     <div class="modal-header">
@@ -39,4 +69,4 @@
 
     </div>
 
-</div>
+</div>-->

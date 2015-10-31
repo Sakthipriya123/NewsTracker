@@ -16,5 +16,6 @@ namespace NewsProject.Models
         public string Description { get; set; }
         public string FullArticle { get; set; }
         public Category Category { get; set; }
-    }
+        public int CategoryId { get; set; }
+            }
 }

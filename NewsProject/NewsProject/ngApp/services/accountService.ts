@@ -56,7 +56,7 @@
         logout() {
             // clear all of session storage (including claims)
             this.$window.sessionStorage.clear();
-        }
+            }
 
         isLoggedIn() {
             return this.$window.sessionStorage.getItem('token');

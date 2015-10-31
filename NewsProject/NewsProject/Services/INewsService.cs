@@ -1,6 +1,5 @@
-﻿using NewsProject.Models;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
+using NewsProject.Models;
 
 namespace NewsProject.Services
 {

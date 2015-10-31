@@ -13,7 +13,7 @@ namespace NewsProject.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201510252049036_start"; }
+            get { return "201510302222549_start"; }
         }
         
         string IMigrationMetadata.Source

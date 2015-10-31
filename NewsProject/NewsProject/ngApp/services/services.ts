@@ -20,27 +20,23 @@
         }
 
         public getArticle(id: number) {
-            return this.newsResource.get({ id: id });
+            return this.newsResource.get({id: id}).$promise;
         }
 
         public getCategories() {
             return this.categoryResource.query();
         }
         public getCategory(id: number) {
-            return this.categoryResource.get({id : id });
+            return this.categoryResource.get({id: id });
         }
 
-        public change(data) {
-            return this.categoryResource.get(data).$promise;
-        }
-
-        public listnews() {
+         public listnews() {
             return this.adminResource.query();
         }
 
 
         constructor($resource: angular.resource.IResourceService) {
-            this.newsResource = $resource('/api/NewsApp/:id');
+            this.newsResource = $resource('/api/newsapp/:id');
             this.categoryResource = $resource('/api/categories/:id');
             this.adminResource = $resource('/api/admin/:id');       
 

@@ -19,13 +19,16 @@ namespace NewsProject.Services
 
         public void AddNews(News news)
         {
+            //var category = _repo.Find<Category>(news.Category.Id);
+            //category.News.Add(news);
             _repo.Add(news);
             _repo.SaveChanges();
         }
 
         public News GetNews(int id)
         {
-            return _repo.Find<News>(id);
+            return this._repo.Find<News>(id);
+                             
         }
 
         public IList<NewsListView> ListNews()

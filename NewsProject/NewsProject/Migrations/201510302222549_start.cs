@@ -26,11 +26,36 @@ namespace NewsProject.Migrations
                         Author = c.String(),
                         Description = c.String(),
                         FullArticle = c.String(),
-                        Category_Id = c.Int(),
+                        CategoryId = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Categories", t => t.Category_Id)
-                .Index(t => t.Category_Id);
+                .ForeignKey("dbo.Categories", t => t.CategoryId, cascadeDelete: true)
+                .Index(t => t.CategoryId);
+            
+            CreateTable(
+                "dbo.CategoryViews",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        CategoryName = c.String(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.NewsViews",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Image = c.String(),
+                        Title = c.String(),
+                        Author = c.String(),
+                        Description = c.String(),
+                        FullArticle = c.String(),
+                        CategoryView_Id = c.Int(),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.CategoryViews", t => t.CategoryView_Id)
+                .Index(t => t.CategoryView_Id);
             
             CreateTable(
                 "dbo.AspNetRoles",
@@ -108,19 +133,23 @@ namespace NewsProject.Migrations
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
-            DropForeignKey("dbo.News", "Category_Id", "dbo.Categories");
+            DropForeignKey("dbo.NewsViews", "CategoryView_Id", "dbo.CategoryViews");
+            DropForeignKey("dbo.News", "CategoryId", "dbo.Categories");
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
             DropIndex("dbo.AspNetUserRoles", new[] { "RoleId" });
             DropIndex("dbo.AspNetUserRoles", new[] { "UserId" });
             DropIndex("dbo.AspNetRoles", "RoleNameIndex");
-            DropIndex("dbo.News", new[] { "Category_Id" });
+            DropIndex("dbo.NewsViews", new[] { "CategoryView_Id" });
+            DropIndex("dbo.News", new[] { "CategoryId" });
             DropTable("dbo.AspNetUserLogins");
             DropTable("dbo.AspNetUserClaims");
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.NewsViews");
+            DropTable("dbo.CategoryViews");
             DropTable("dbo.News");
             DropTable("dbo.Categories");
         }

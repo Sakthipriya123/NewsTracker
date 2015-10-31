@@ -24,6 +24,9 @@ namespace NewsProject.Models
         public IDbSet<News> News { get; set; }
         public IDbSet<Category> Categories { get; set; }
 
+        public IDbSet<CategoryView> CategoryList { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

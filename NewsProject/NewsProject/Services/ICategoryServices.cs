@@ -6,6 +6,6 @@ namespace NewsProject.Services
     public interface ICategoryServices
     {
         CategoryView GetNews(int id);
-        IList<Category> ListCategories();
+        IList<CategoryView> ListCategories();
     }
 }

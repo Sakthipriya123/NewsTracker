@@ -41,7 +41,7 @@ namespace NewsProject.Services
                  Description =n.Description,
                CategoryName = n.Category.CategoryName,
 
-           }).ToList();
+           }).OrderByDescending(x => x.Id).ToList();
             return news;
         }
     }

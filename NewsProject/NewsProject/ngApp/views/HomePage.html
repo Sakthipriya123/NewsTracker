@@ -1,20 +1,19 @@
 ﻿
 <div ng-show ="account.isLoggedIn()"class="container-fluid">
     <div class="row">
-         <div class="col-md-3"></div>
-            <div class="col-md-7">
-            <div ng-repeat="publish in vm.news" ng-click="vm.showModal(publish.id)" class="block grid-parent col-md-4 thumbnail" ng-if="$index % 2 == 0 " id="category-description">
+         <!--<div class="col-md-2"></div>-->
+            <div  class="col-md-12 heading-primary" >
+            <div ng-repeat="publish in vm.news" ng-click="vm.showModal(publish.id)" class="block grid-parent col-md-4" id="category-description">
                 
                     <img ng-src="{{publish.image}}"
-                         style="width: 300px; height: 300px" />
-                    <h4 id="title">{{publish.title}}</h4><h5 id="author">By {{publish.author}}</h5>
+                         style="width: 450px; height: 275px" />
+                    <h4 id="title">{{publish.title}}</h4>
+                    <h5 id="author">By {{publish.author}}</h5>
                    <p id="desc">{{publish.description}}</p>
-                <h4><em><strong>{{publish.categoryName}}</strong></em></h4>
-
-                <hr />
+                   <h4 id="category">{{publish.categoryName}}</h4>
             </div>
                 </div>
-            <div class="col-md-2"></div> 
+            <!--<div class="col-md-1"></div>-->
         </div>
     </div>
     

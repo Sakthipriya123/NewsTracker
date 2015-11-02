@@ -35,6 +35,9 @@ namespace NewsProject.Models
     public class RegisterBindingModel
     {
         [Required]
+        public string FullName { get; set; }
+
+        [Required]
         [Display(Name = "Email")]
         public string Email { get; set; }
 

@@ -123,4 +123,3 @@ var NewsPage;
         angular.module('NewsPage').service('accountService', AccountService);
     })(Services = NewsPage.Services || (NewsPage.Services = {}));
 })(NewsPage || (NewsPage = {}));
-//# sourceMappingURL=accountService.js.map

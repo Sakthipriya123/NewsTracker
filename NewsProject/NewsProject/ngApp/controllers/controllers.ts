@@ -33,6 +33,13 @@
         private categories;
         public loaded: number = 0;
         public max: number = 100;
+        //public bar;
+        //public showProgress(e) {
+        //    if (e = true) {
+        //        this.bar = false;
+        //    }
+        //}
+        
 
         public save() {            
  

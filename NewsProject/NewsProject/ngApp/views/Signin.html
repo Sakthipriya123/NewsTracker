@@ -1,9 +1,11 @@
-﻿<div class="container divbody">
+﻿
+
+<div class="container divbody">
     <div class="row">
         <div class="Absolute-Center is-Responsive">
-            <div id="logo-container"></div>
             <div class="col-md-4"></div>
-            <div class="col-sm-4 col-md-10 col-md-offset-1">
+            <div class="col-sm-4 col-md-10 col-md-offset-1" style="font-size:large; font-weight:500; color:darkslategrey"> Sign in to NewsBoard
+            <br /><br />
                 <form id="loginForm" ng-submit="controller.login()">
                        <div class="form-group input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
@@ -11,11 +13,12 @@
                     </div>
                     <div class="form-group input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                        <input ng-model="controller.loginUser.password" class="form-control" type="password" name='password' placeholder="password" />
+                        <input ng-model="controller.loginUser.password" class="form-control" type="password" name='password' placeholder="Password" />
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-def btn-block">Signin</button>
+                        <button type="submit" class="btn btn-success btn-block" id="signin">Sign In</button>
                            </div>
+                    <div><a id="signup" href="/Signup"><h4>New user? Sign up here</h4></a></div>
                     </form>
             </div>
             <div class="col-md-4"></div>

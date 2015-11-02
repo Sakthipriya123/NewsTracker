@@ -17,15 +17,13 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12 heading-primary" data-ng-init="vm.scategories.news">
-            <div ng-repeat="publish in vm.scategories.news" class="block grid-parent col-md-4 thumbnail" ng-if="$index % 1 == 0 " id="category-description">
+            <div ng-repeat="publish in vm.scategories.news" class="block grid-parent col-md-4" ng-if="$index % 1 == 0 " id="category-description">
                 <div ng-click="vm.showModal(publish.id)">
                     <img ng-src="{{publish.image}}"
-                         style="width: 300px; height: 300px" />
+                         style="width: 450px; height: 300px" />
                     <h4 id="title">{{publish.title}}</h4><h5 id="author">By {{publish.author}}</h5>
                     <p id="desc">{{publish.description}}</p>
-                    <em><strong>{{publish.categoryName}}</strong></em>
-
-                    <hr />
+                    <h4 id="category">{{publish.categoryName}}</h4>
                 </div>     
                 
             </div>

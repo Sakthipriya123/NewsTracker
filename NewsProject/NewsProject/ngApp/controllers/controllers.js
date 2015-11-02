@@ -37,6 +37,12 @@ var NewsPage;
                 //this.newsServices.change(this.selectedCategory).then((data) => {
                 //});
             }
+            //public bar;
+            //public showProgress(e) {
+            //    if (e = true) {
+            //        this.bar = false;
+            //    }
+            //}
             PublishController.prototype.save = function () {
                 var _this = this;
                 this.addArticle.image = "https://myimagedata.blob.core.windows.net/mycontainer/\"" + fname + "\"";
@@ -163,4 +169,3 @@ var NewsPage;
         angular.module('NewsPage').controller('AdminController', AdminController);
     })(Controllers = NewsPage.Controllers || (NewsPage.Controllers = {}));
 })(NewsPage || (NewsPage = {}));
-//# sourceMappingURL=controllers.js.map

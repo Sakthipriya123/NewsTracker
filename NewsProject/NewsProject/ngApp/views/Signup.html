@@ -1,46 +1,59 @@
-﻿<h1>Register</h1>
+﻿<div class="container divbody">
+    <div class="row">
+        <div class="Absolute-Center is-Responsive">
+            <div class="col-md-4"></div>
+            <div class="col-sm-4 col-md-10 col-md-offset-1" style="font-size:large; font-weight:500; color:darkslategrey">
+                Sign Up
+                <br /><br />
+                <!--<fieldset>
+                    <legend>Signup with Twitter</legend>
+                    <ul>
+                        <li ng-repeat="externalLogin in account.externalLogins">
+                            <a target="_self" href="{{externalLogin.url}}">{{externalLogin.name}}</a>
+                        </li>
+                    </ul>
 
-<fieldset>
-    <legend>Register with a Social Provider</legend>
-    <ul>
-        <li ng-repeat="externalLogin in account.externalLogins">
-            <a target="_self" href="{{externalLogin.url}}">{{externalLogin.name}}</a>
-        </li>
-    </ul>
+                </fieldset>-->
 
-</fieldset>
+                <fieldset>
+                    <!--  <legend>Signup using your Email</legend>-->
+                    <ul>
+                        <li ng-repeat="message in controller.validationMessages">
+                            {{message}}
+                        </li>
+                    </ul>
 
-<fieldset>
-    <legend>Local Registration</legend>
-    <ul>
-        <li ng-repeat="message in controller.validationMessages">
-            {{message}}
-        </li>
-    </ul>
-
-    <form ng-submit="controller.register()">
-        <div>
-            <label>Email:</label>
-            <input ng-model="controller.registerUser.email" />
-        </div>
-        <div>
-            <!--<div>
-                <label>FirstName</label>
-                <input ng-model="controller.registerUser.firstname" />
+                    <form id="loginForm" ng-submit="controller.register()">
+                        <div class="form-group">
+                            <!--<label class="col-sm-2 control-label">Email:</label>-->
+                            <input class="form-control" type="text" name='username' placeholder="FullName" ng-model="controller.registerUser.fullname" />
+                        </div>
+                        <div class="form-group">
+                            <!--<label class="col-sm-2 control-label">Email:</label>-->
+                            <input class="form-control" type="text" name='username' placeholder="Email Address" ng-model="controller.registerUser.email" />
+                        </div>
+                        <div class="form-group">
+                            <!--<label class="col-sm-2 control-label">Password:</label>-->
+                            <input class="form-control" type="password" name='password' placeholder="Password" ng-model="controller.registerUser.password" />
+                        </div>
+                        <div class="form-group">
+                            <!--<label class="col-sm-2 control-label">Confirm Password:</label>-->
+                            <input class="form-control" type="password" name='password' placeholder="ConfirmPassword" ng-model="controller.registerUser.confirmPassword" />
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-success btn-block" id="register" value="Register">Register</button>
+                        </div>
+                    </form>
+                    </fieldset>
             </div>
-            <div>
-                <label>LastName</label>
-                <input ng-model="controller.registerUser.lastname" />
-            </div>-->
-            <label>Password:</label>
-            <input ng-model="controller.registerUser.password" />
+            <div class="col-md-4"></div>
         </div>
-        <div>
-            <label>Confirm Password:</label>
-            <input ng-model="controller.registerUser.confirmPassword" />
-        </div>
+    </div>
+</div>
 
-        <input type="submit" value="Register" />
-    </form>
 
-</fieldset>
+    </div>
+</div>
+    </div>
+</div>
+

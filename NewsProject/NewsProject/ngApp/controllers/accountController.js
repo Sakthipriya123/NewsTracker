@@ -101,4 +101,3 @@ var NewsPage;
         Controllers.ExternalRegisterController = ExternalRegisterController;
     })(Controllers = NewsPage.Controllers || (NewsPage.Controllers = {}));
 })(NewsPage || (NewsPage = {}));
-//# sourceMappingURL=accountController.js.map

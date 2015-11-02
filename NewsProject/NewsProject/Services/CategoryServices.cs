@@ -34,7 +34,7 @@ namespace NewsProject.Services
             {
                 CategoryName = category.CategoryName,
                 Id = category.Id,
-                News = category.News.Select(c => new NewsView { Id = c.Id,Title = c.Title,Image = c.Image, Author = c.Author,Description=c.Description }).ToList(),
+                News = category.News.Select(c => new NewsView { Id = c.Id,Title = c.Title,Image = c.Image, Author = c.Author,Description=c.Description }).OrderByDescending(x => x.Id).ToList(),
              
             };
             return categoryview;

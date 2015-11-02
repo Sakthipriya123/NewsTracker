@@ -9,6 +9,7 @@
     <link href="~/Content/news.css" rel="stylesheet" />
     <link href="~/Content/ui-bootstrap-csp.css" rel="stylesheet" />
     <link href="~/Content/bootswatch.min.css" rel="stylesheet" />
+    
     @*<style>
             .carousel-inner > .item > img,
             .carousel-inner > .item > a > img {
@@ -21,70 +22,72 @@
 
     <link href="~/Content/Site.css" rel="stylesheet" />
 </head>
-<body ng-controller="AccountController as account">
-
-    <div class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header pull-left">
-                <a class="navbar-brand" href="#">NewsBoard</a>
+<body  id="bootstrap-overrides" ng-controller="AccountController as account">
+        <div class="navbar navbar-default navbar-fixed-top">
+            <div class="navbar-collapse collapse container">
+                <div class="navbar-header pull-left">
+                    <a id="apptitle" class="navbar-brand" href="#">NewsBoard</a>
                 </div>
-              <ul class="nav nav-tabs pull-right" id="hometabs">
-                <li>
-                    <a href="/HomePage">Home</a>
-                </li>
-                <li>
-                    <a href="/Categories">Categories</a>
-                </li>
-                <li ng-if="account.getClaim('ViewNews')">
-                    <a href="/Publish">Publish</a>
-                </li>
-                <li class="pull-right">
-                    <a href="/Signin" ng-show="!account.isLoggedIn()">Sign in</a>
-                </li>
-                <li class="pull-right">
-                    <a href="#" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a>
-                </li>
-            </ul>
-                </div>
-        </div>
-    
-    <br/>          
-
-
-
-
-            <ng-view></ng-view>
-    @*<div ng-show="!account.isLoggedIn()" class="container">
-        <div class="container">
-            <a href="http://fortune.com/2015/10/29/theranos-board-restructure/">
-                <div class="jumbotron">
-                    <h4 ng-class="pull-down">Theranos restructures board amid questions about its technology</h4><p>by  Kia Kokalitcheva</p>
-                    </div>
-            </a>
+                <ul class="nav navbar-nav pull-right" id="hometabs">
+                    <li>
+                        <a ng-show="account.isLoggedIn()" href="/HomePage">Home</a>
+                    </li>
+                    <li>
+                        <a ng-show="account.isLoggedIn()"href="/Categories">Categories</a>
+                    </li>
+                    <li ng-if="account.getClaim('ViewNews')">
+                        <a href="/Publish">Publish</a>
+                    </li>
+                    <li class="pull-right">
+                        <a href="/Signin" ng-show="!account.isLoggedIn()">Sign in</a>
+                    </li>
+                    <li class="pull-right">
+                        <h2 ng-show="account.isLoggedIn()">{{account.registerUser.fullname}}</h2>
+                    </li>
+                    <li class="pull-right">
+                        <a href="/Signin" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a>
+                    </li>
+                </ul>
             </div>
-        </div>*@
+        </div>
+
+        <br />
     
-            @*<footer class="container-fluid">
+
+
+    
+        <ng-view></ng-view>
+        @*<div ng-show="!account.isLoggedIn()" class="container">
+            <div class="container">
+                <a href="http://fortune.com/2015/10/29/theranos-board-restructure/">
+                    <div class="jumbotron">
+                        <h4 ng-class="pull-down">Theranos restructures board amid questions about its technology</h4><p>by  Kia Kokalitcheva</p>
+                        </div>
+                </a>
+                </div>
+            </div>*@
+
+        @*<footer class="container-fluid">
                 <p>copyright</p>
             </footer>*@
 
 
 
 
-    <script src="~/Scripts/jquery-2.1.4.min.js"></script>
-            <script src="~/Scripts/angular.min.js"></script>
-            <script src="~/Scripts/angular-route.min.js"></script>
-            <script src="~/Scripts/angular-resource.min.js"></script>
-            
-          
-            <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
-           <script src="~/Scripts/ng-file-upload.min.js"></script>
-    
-            <script src="~/ngAPP/app.js"></script>
-            <script src="~/ngAPP/controllers/controllers.js"></script>
-            <script src="~/ngApp/controllers/accountController.js"></script>
-            <script src="~/ngApp/services/services.js"></script>
-            <script src="~/ngApp/services/accountService.js"></script>
+        <script src="~/Scripts/jquery-2.1.4.min.js"></script>
+        <script src="~/Scripts/angular.min.js"></script>
+        <script src="~/Scripts/angular-route.min.js"></script>
+        <script src="~/Scripts/angular-resource.min.js"></script>
 
-</body>
+
+        <script src="~/Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+        <script src="~/Scripts/ng-file-upload.min.js"></script>
+
+        <script src="~/ngAPP/app.js"></script>
+        <script src="~/ngAPP/controllers/controllers.js"></script>
+        <script src="~/ngApp/controllers/accountController.js"></script>
+        <script src="~/ngApp/services/services.js"></script>
+        <script src="~/ngApp/services/accountService.js"></script>
+
+    </body>
 </html>

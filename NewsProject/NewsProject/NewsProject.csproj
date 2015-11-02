@@ -268,11 +268,16 @@
     <Compile Include="Migrations\201510302222549_start.Designer.cs">
       <DependentUpon>201510302222549_start.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201511020730337_create.cs" />
+    <Compile Include="Migrations\201511020730337_create.Designer.cs">
+      <DependentUpon>201511020730337_create.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryView.cs" />
+    <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\GenericRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IEFRepository.cs" />
@@ -403,7 +408,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="ngApp\app.ts" />
-    <TypeScriptCompile Include="GitIgnore\accountController.ts" />
+    <TypeScriptCompile Include="ngApp\controllers\accountController.ts" />
     <TypeScriptCompile Include="ngApp\controllers\controllers.ts" />
     <TypeScriptCompile Include="ngApp\services\accountService.ts" />
     <TypeScriptCompile Include="ngApp\services\services.ts" />
@@ -425,6 +430,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201510302222549_start.resx">
       <DependentUpon>201510302222549_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511020730337_create.resx">
+      <DependentUpon>201511020730337_create.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

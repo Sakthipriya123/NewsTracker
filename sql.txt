@@ -1,0 +1,9 @@
+DBCC CHECKIDENT ('Categories', RESEED, 0);
+
+https://github.com/codercamps/CoderCamps-SPA/releases
+
+
+https://myimagedata.blob.core.windows.net/mycontainer
+
+
+https://myimagedata.blob.core.windows.net/mycontainer/%22plant4.jpg%22

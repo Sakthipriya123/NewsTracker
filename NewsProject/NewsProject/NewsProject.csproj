@@ -221,6 +221,7 @@
     <Compile Include="API\AdminController.cs" />
     <Compile Include="API\BlobController.cs" />
     <Compile Include="API\CategoriesController.cs" />
+    <Compile Include="API\CommentsController.cs" />
     <Compile Include="API\NewsAppController.cs" />
     <Compile Include="API\UploadController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -264,20 +265,24 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201510302222549_start.cs" />
-    <Compile Include="Migrations\201510302222549_start.Designer.cs">
-      <DependentUpon>201510302222549_start.cs</DependentUpon>
+    <Compile Include="Migrations\201511030439080_start.cs" />
+    <Compile Include="Migrations\201511030439080_start.Designer.cs">
+      <DependentUpon>201511030439080_start.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511020730337_create.cs" />
-    <Compile Include="Migrations\201511020730337_create.Designer.cs">
-      <DependentUpon>201511020730337_create.cs</DependentUpon>
+    <Compile Include="Migrations\201511030705284_st.cs" />
+    <Compile Include="Migrations\201511030705284_st.Designer.cs">
+      <DependentUpon>201511030705284_st.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511030905086_hhh.cs" />
+    <Compile Include="Migrations\201511030905086_hhh.Designer.cs">
+      <DependentUpon>201511030905086_hhh.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\CategoryView.cs" />
-    <Compile Include="Models\Comments.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\GenericRepository.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\IEFRepository.cs" />
@@ -289,7 +294,9 @@
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Services\CategoryServices.cs" />
+    <Compile Include="Services\CommentService.cs" />
     <Compile Include="Services\ICategoryServices.cs" />
+    <Compile Include="Services\ICommentService.cs" />
     <Compile Include="Services\INewsService.cs" />
     <Compile Include="Services\NewsService.cs" />
     <Compile Include="Startup.cs" />
@@ -310,6 +317,7 @@
     <Content Include="Global.asax" />
     <Content Include="ngApp\views\Admin.html" />
     <Content Include="ngApp\views\Categories.html" />
+    <Content Include="ngApp\views\Comments.html" />
     <Content Include="ngApp\views\Details.html" />
     <Content Include="ngApp\views\externalLogin.html" />
     <Content Include="ngApp\views\externalRegister.html" />
@@ -428,11 +436,14 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201510302222549_start.resx">
-      <DependentUpon>201510302222549_start.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511030439080_start.resx">
+      <DependentUpon>201511030439080_start.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511020730337_create.resx">
-      <DependentUpon>201511020730337_create.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511030705284_st.resx">
+      <DependentUpon>201511030705284_st.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511030905086_hhh.resx">
+      <DependentUpon>201511030905086_hhh.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -66,6 +66,7 @@ namespace NewsProject.App_Start
             kernel.Bind<IGenericRepository>().To<GenericRepository>();
             kernel.Bind<INewsService>().To<NewsService>();
             kernel.Bind<ICategoryServices>().To<CategoryServices>();
+            kernel.Bind<ICommentService>().To<CommentService>();
         }        
     }
 }

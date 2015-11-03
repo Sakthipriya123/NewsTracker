@@ -5,9 +5,12 @@
     <h5><img ng-src="{{modal.articleToView.image}}"
      style="width:600px; height: 300px" /></h5>
     <h5>By {{modal.articleToView.author}}</h5>
-    <pre>{{modal.articleToView.fullArticle}}</pre>
-
-    <hr />
+    <p id="pmodel">{{modal.articleToView.fullArticle}}</p>
+    <h2>Comments</h2>
+    <form ng-submit="modal.newComment()">
+    <textarea maxlength="500" class="form-control" style="width:2000px"  ng-model="modal.comment.commentText" />
+    <button type="submit" class="button btn-success" style="width:150px; font-weight:300">Post Comment</button></form>
+    <p ng-repeat="comment in modal.articleToView.comments">Commented on: {{comment.commentedOn}}: {{comment.commentText}} by {{controller.user.fullName}}</p><hr/>
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="modal.ok()">Close</button>
@@ -17,22 +20,4 @@
 
 
 
-
-<!--<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-8">
-            
-                <h3>{{vm.article.title}}</h3>
-                <img ng-src="{{vm.article.image}}"
-                     style="width:600px; height: 300px" />
-                <h5>By {{vm.article.author}}</h5>
-                <p>{{vm.article.fullArticle}}</p>
-
-                <hr />
-            
-        </div>
-        <div class="col-md-4">
-           
-        </div>    </div>
-</div>-->
 

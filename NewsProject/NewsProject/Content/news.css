@@ -70,7 +70,7 @@ height: 80%;
     text-align:center;
     padding:40px 0;
 }
-#category{
+.category{
     text-align:left;
     font-style:italic;
     font-size:14px;
@@ -163,8 +163,13 @@ footer{
   color: white;
 }
 
+#pmodel{
+   white-space:pre-wrap;
+   text-indent:10px;
+}
+
 div.well{
-  height: 250px;
+  height: 250%;
 } 
 
 .Absolute-Center {
@@ -184,8 +189,8 @@ div.well{
 #logo-container{
   margin: auto;
   margin-bottom: 10px;
-  width:240px;
-  height:60px;
+  width:240%;
+  height:60%;
   background-image:url('http://placehold.it/240x60/000000/ffffff/&text=Sign+In');
   font-size:20px;
 }
@@ -215,9 +220,10 @@ div.well{
     text-align: center;
 }
 
-pre{
-    background-color:aliceblue;
+#loginForm{
+
 }
+
 
 .modal{
     display: block !important; /* I added this to see the modal, you don't need this */
@@ -227,21 +233,37 @@ pre{
 .modal-dialog{
     overflow-y: initial !important
 }
-.modal-body{
-    height: 250px;
-    overflow-y: auto;
+.modal-content {
+     /*80% of window height*/ 
+    height: 95%;
 }
-.modal-body{
-    height: 250px;
-    overflow-y: auto;
+
+.modal-body {
+    /* 100% = dialog height, 120px = header + footer */
+    max-height: calc(100% - 40px);
+    overflow-y: scroll;
+}
+.modal-footer{
+    height: 100%;
 }
 
 @media (min-height: 500px) {
     .modal-body { height: 400px; }
-}
+    }
 
 @media (min-height: 800px) {
     .modal-body { height: 600px; }
+}
+
+@media (min-width: 500px) {
+    .loginForm { height: 400px; }
+}
+
+@media (min-width: 1000px) {
+    .loginForm { height: 800px; }
+}
+@media (max-width: 1000px) {
+    .loginForm { height: 800px; }
 }
 
         /*//constructor(private $resource: ng.resource.IResourceService) {

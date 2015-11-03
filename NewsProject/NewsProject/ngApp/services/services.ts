@@ -5,6 +5,7 @@
         public categories;
         public categoryResource;
         private adminResource;
+        private commentResource;
 
 
         public listNews() {
@@ -34,16 +35,29 @@
             return this.adminResource.query();
         }
 
-
-        constructor($resource: angular.resource.IResourceService) {
+                constructor($resource: angular.resource.IResourceService) {
             this.newsResource = $resource('/api/newsapp/:id');
             this.categoryResource = $resource('/api/categories/:id');
-            this.adminResource = $resource('/api/admin/:id');       
-
-           
+            this.adminResource = $resource('/api/admin/:id'); 
+                    
         }
 
     }
 
     angular.module("NewsPage").service("newsServices", NewsServices);
+
+    export class CommentService {
+        private commentResource;
+
+        public save(comment){
+            return this.commentResource.save(comment).$promise;
+        }
+               
+
+        constructor($resource: ng.resource.IResourceService) {
+            this.commentResource = $resource('/api/comments');
+        }
+
+    }
+    angular.module("NewsPage").service("commentService", CommentService);
 }

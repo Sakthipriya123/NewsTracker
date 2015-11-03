@@ -1,5 +1,5 @@
 ﻿
-<div ng-show ="account.isLoggedIn()"class="container-fluid">
+<div ng-show ="account.isLoggedIn()" class="container-fluid">
     <div class="row">
          <!--<div class="col-md-2"></div>-->
             <div  class="col-md-12 heading-primary" >
@@ -10,7 +10,8 @@
                     <h4 id="title">{{publish.title}}</h4>
                     <h5 id="author">By {{publish.author}}</h5>
                    <p id="desc">{{publish.description}}</p>
-                   <h4 id="category">{{publish.categoryName}}</h4>
+                   <h4 class="category">{{publish.categoryName}}</h4>
+                   <h5 class="category" ng-model="vm.comments">{{vm.comments.count}}comment</h5>
             </div>
                 </div>
             <!--<div class="col-md-1"></div>-->

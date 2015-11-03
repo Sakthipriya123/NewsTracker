@@ -7,13 +7,13 @@ namespace NewsProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class create : IMigrationMetadata
+    public sealed partial class st : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(create));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(st));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511020730337_create"; }
+            get { return "201511030705284_st"; }
         }
         
         string IMigrationMetadata.Source

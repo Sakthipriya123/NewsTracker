@@ -24,7 +24,7 @@
                                     </label>
                                     <div class="col-sm-10" style="width:20px">
                                         <button class="button btn-info" style="width:150px" ngf-select="vm.upload($file)">Upload</button>
-                                        <uib-progressbar style="width:200px" value="vm.loaded" max="vm.max"></uib-progressbar>
+                                        <uib-progressbar ng-show="!vm.loaded==0" style="width:200px" value="vm.loaded" max="vm.max"></uib-progressbar>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -90,57 +90,8 @@
 
 
 
-<!--<br />
-<div class="container-fluid">
-    <div class="row">
-        <div class="Absolute-Center is-Responsive">
-             <div class="col-md-12">
-                <div class="bs-example">
-                    <form class="form-horizontal" ng-submit="vm.save()">
-                        <div class="form-group">
-                            <label class="control-label col-xs-2">Title</label>
-                            <div class="col-xs-10">
-                                <input class="form-control" ng-model="vm.addArticle.title">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-xs-2">Image</label>
-                            <div class="col-xs-10">
-                                <button class="button" ngf-select="vm.upload($file)">Upload</button>
-                                <uib-progressbar value="vm.loaded" max="vm.max"></uib-progressbar>
-                                <input class="form-control" ng-model="vm.addArticle.image">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-xs-2">Abstract</label>
-                            <div class="col-xs-10">
-                                <textarea class="form-control" rows="5" id="comment" ng-model="vm.addArticle.description"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-xs-2">Content</label>
-                            <div class="col-xs-10">
-                                <textarea class="form-control" rows="10" cols="10" id="comment" ng-model="vm.addArticle.fullArticle"></textarea>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label col-xs-2">Categories</label>
-                            <div class="dropdown">
-                                <select class="form-control" id="sel1" ng-model="vm.categoryname" ng-options="category.categoryName for category in vm.categories"></select>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-xs-offset-2 col-xs-2">
-                                <button type="submit"><img alt="Bootstrap Image Preview" src="http://www.clker.com/cliparts/Z/r/I/W/D/j/add-button-png-hi.png" class="img-rounded button" /></button>
-                            </div>
-                        </div>
-                    </form>
-                       </div>
-        </div>
-</div>
-    </div>
-    </div>-->
-   
+
+
 
 
 <!--<a href="/HomePage">Back</a>-->

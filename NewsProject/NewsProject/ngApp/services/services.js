@@ -33,5 +33,16 @@ var NewsPage;
         })();
         Services.NewsServices = NewsServices;
         angular.module("NewsPage").service("newsServices", NewsServices);
+        var CommentService = (function () {
+            function CommentService($resource) {
+                this.commentResource = $resource('/api/comments');
+            }
+            CommentService.prototype.save = function (comment) {
+                return this.commentResource.save(comment).$promise;
+            };
+            return CommentService;
+        })();
+        Services.CommentService = CommentService;
+        angular.module("NewsPage").service("commentService", CommentService);
     })(Services = NewsPage.Services || (NewsPage.Services = {}));
 })(NewsPage || (NewsPage = {}));

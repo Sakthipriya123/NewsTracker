@@ -25,7 +25,7 @@ namespace NewsProject.Models
     {
         public IDbSet<News> News { get; set; }
         public IDbSet<Category> Categories { get; set; }
-
+        public IDbSet<Comment> Comments { get; set; }
         public IDbSet<CategoryView> CategoryList { get; set; }
 
 

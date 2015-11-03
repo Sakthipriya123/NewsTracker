@@ -20,7 +20,8 @@
 
 
         constructor(private $routeParams: ng.route.IRouteParamsService,private $modal: angular.ui.bootstrap.IModalService, private newsServices: NewsPage.Services.NewsServices, private $location: angular.ILocationService) {
-            this.news =this.newsServices.listNews();
+            this.news = this.newsServices.listNews();
+   
            
         }
        
@@ -133,64 +134,39 @@
     angular.module('NewsPage').controller('SingleCategoriesController', SingleCategoriesController);
 
     class DialogController {
-        public articleToView
+        public articleToView;
+        public comment;
+        public user;
 
         public ok() {
             this.$modalInstance.close();
         }
 
-        constructor(private newsArticleId, private newsServices: NewsPage.Services.NewsServices, private $routeParams: ng.route.IRouteParamsService, private $modalInstance: angular.ui.bootstrap.IModalServiceInstance) {
-             this.newsServices.getArticle(newsArticleId).then((data) => {
-                 this.articleToView = data;
+        public newComment() {
+            this.comment.newsId = this.newsArticleId;
+            this.commentService.save(this.comment).then(() => {
+                //this.$location.path('/');
+                this.fetchArticle();
             });
+
+        }
+
+        private fetchArticle() {
+            this.newsServices.getArticle(this.newsArticleId).then((data) => {
+                this.articleToView = data;
+
+            });
+
+        }
+
+        constructor(private commentService: NewsPage.Services.CommentService, private newsArticleId, private newsServices: NewsPage.Services.NewsServices, private $routeParams: ng.route.IRouteParamsService, private $modalInstance: angular.ui.bootstrap.IModalServiceInstance) {
+            this.fetchArticle();
         }
     }
 
     angular.module('NewsPage').controller('DialogController', DialogController);
 
-    class SignInController {
-
-
-    }
-
-    angular.module('NewsPage').controller('SignInController', SignInController);
-
-    class NewsListController {
-
-
-
-    }
-    angular.module('NewsPage').controller('NewsListController', NewsListController);
-
-    //class NewsDetailController {
-
-    //    public article;
-    //    public articleId;   
-
-
-    //    public showModal(articleId) {
-    //        this.$uibModal.open({
-    //            templateUrl: '/ngApp/views/Details.html',
-    //            controller: 'DialogController',
-    //            controllerAs: 'modal',
-    //            resolve: {
-    //                newsArticleId: () => { articleId }
-
-    //            },
-    //        });
-    //    }
-
-    //    constructor(private newsServices: NewsPage.Services.NewsServices, $routeParams: ng.route.IRouteParamsService, private $location: ng.ILocationService, private $uibModal: angular.ui.bootstrap.IModalService) {
-    //        this.articleId = $routeParams['id'];
-    //        this.article = this.newsServices.getArticle($routeParams['id']);
-                
-    //        }
-    //}
-      
-    //angular.module('NewsPage').controller('NewsDetailController', NewsDetailController);
-
-
-    export class AdminController {
+   export class AdminController {
         public users;
 
         constructor
@@ -200,5 +176,7 @@
         }
     }
     
-    angular.module('NewsPage').controller('AdminController', AdminController);
-}
+   angular.module('NewsPage').controller('AdminController', AdminController);
+
+
+   }

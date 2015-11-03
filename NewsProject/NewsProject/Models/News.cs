@@ -17,5 +17,12 @@ namespace NewsProject.Models
         public string FullArticle { get; set; }
         public Category Category { get; set; }
         public int CategoryId { get; set; }
-            }
+        public ICollection<Comment> Comments { get; set; }
+        //public ICollection<ApplicationUser> User { get; set; }
+
+        public News()
+        {
+            this.Comments = new List<Comment>();
+        }
+    }
 }

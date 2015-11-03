@@ -19,10 +19,6 @@
                     templateUrl: '/ngApp/views/Publish.html',
                     controller: 'PublishController as vm'
                 })
-                //.when('/Catagories', {
-                //    templateUrl: '/ngApp/views/Catagories.html',
-                //    controller: 'PublishController as vm'
-                //})
                   .when('/Signin', {
                       templateUrl: '/ngApp/views/Signin.html',
                       controller: NewsPage.Controllers.LoginController,
@@ -35,11 +31,7 @@
                     templateUrl: '/ngApp/views/Categories.html',
                     controller: 'CategoriesController as vm'
                 })
-                //.when('/Details/:id', {
-                //    templateUrl: '/ngApp/views/Details.html',
-                //    controller: 'NewsDetailController as vm'
-                //})
-                .when('/SingleCategory/:id', {
+                 .when('/SingleCategory/:id', {
                     templateUrl: '/ngApp/views/SingleCategory.html',
                     controller: 'SingleCategoriesController as vm'
                 })

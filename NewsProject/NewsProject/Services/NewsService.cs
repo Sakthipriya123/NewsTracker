@@ -27,19 +27,22 @@ namespace NewsProject.Services
 
         public News GetNews(int id)
         {
-            return this._repo.Find<News>(id);
+            //News news = this._repo.Find<News>(id);
+            News news = _repo.Query<News>().Include(r => r.Comments).Where(f => f.Id == id).ToList()[0];
+            return news;
                              
         }
 
         public IList<NewsListView> ListNews()
         {
-           var  news = _repo.Query<News>().Include(c => c.Category).Select(n => new NewsListView {
-                 Id = n.Id,
-                 Title=n.Title,
-                 Image = n.Image,                
-                 Author = n.Author,
-                 Description =n.Description,
-               CategoryName = n.Category.CategoryName,
+            var news = _repo.Query<News>().Include(c => c.Category).Include(r => r.Comments).Select(n => new NewsListView {
+                Id = n.Id,
+                Title = n.Title,
+                Image = n.Image,
+                Author = n.Author,
+                Description = n.Description,
+                CategoryName = n.Category.CategoryName,
+                Comments = n.Comments,
 
            }).OrderByDescending(x => x.Id).ToList();
             return news;

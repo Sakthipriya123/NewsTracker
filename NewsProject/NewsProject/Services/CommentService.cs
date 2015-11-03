@@ -1,4 +1,5 @@
 ﻿using CoderCamps;
+using Microsoft.AspNet.Identity;
 using NewsProject.Models;
 using System;
 using System.Collections.Generic;
@@ -16,13 +17,16 @@ namespace NewsProject.Services
             this._repo = repo;
         }
 
+        public object User { get; private set; }
+
         public void AddComment(Comment comment)
         {
+            
             comment.CommentedOn = DateTime.Now;
-            comment.User = comment.User;
             this._repo.Add(comment);
             this._repo.SaveChanges();
         }
 
-        }
+       
+    }
 }

@@ -37,17 +37,16 @@ namespace NewsProject.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        UserId = c.Guid(nullable: false),
+                        UserId = c.String(maxLength: 128),
                         NewsId = c.Int(nullable: false),
                         CommentText = c.String(),
                         CommentedOn = c.DateTime(nullable: false),
-                        User_Id = c.String(maxLength: 128),
                     })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AspNetUsers", t => t.User_Id)
+                .ForeignKey("dbo.AspNetUsers", t => t.UserId)
                 .ForeignKey("dbo.News", t => t.NewsId, cascadeDelete: true)
-                .Index(t => t.NewsId)
-                .Index(t => t.User_Id);
+                .Index(t => t.UserId)
+                .Index(t => t.NewsId);
             
             CreateTable(
                 "dbo.AspNetUsers",
@@ -150,7 +149,7 @@ namespace NewsProject.Migrations
             DropForeignKey("dbo.AspNetUserRoles", "RoleId", "dbo.AspNetRoles");
             DropForeignKey("dbo.NewsViews", "CategoryView_Id", "dbo.CategoryViews");
             DropForeignKey("dbo.Comments", "NewsId", "dbo.News");
-            DropForeignKey("dbo.Comments", "User_Id", "dbo.AspNetUsers");
+            DropForeignKey("dbo.Comments", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserRoles", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserLogins", "UserId", "dbo.AspNetUsers");
             DropForeignKey("dbo.AspNetUserClaims", "UserId", "dbo.AspNetUsers");
@@ -162,8 +161,8 @@ namespace NewsProject.Migrations
             DropIndex("dbo.AspNetUserLogins", new[] { "UserId" });
             DropIndex("dbo.AspNetUserClaims", new[] { "UserId" });
             DropIndex("dbo.AspNetUsers", "UserNameIndex");
-            DropIndex("dbo.Comments", new[] { "User_Id" });
             DropIndex("dbo.Comments", new[] { "NewsId" });
+            DropIndex("dbo.Comments", new[] { "UserId" });
             DropIndex("dbo.News", new[] { "CategoryId" });
             DropTable("dbo.AspNetRoles");
             DropTable("dbo.NewsViews");

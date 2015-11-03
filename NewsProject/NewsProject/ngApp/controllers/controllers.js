@@ -130,6 +130,11 @@ var NewsPage;
                     _this.fetchArticle();
                 });
             };
+            //private fetchComment() {
+            //    this.commentService.getComment(this.newsArticleId).then((data) => {
+            //        this.articleToView = data;
+            //    });
+            //}
             DialogController.prototype.fetchArticle = function () {
                 var _this = this;
                 this.newsServices.getArticle(this.newsArticleId).then(function (data) {
@@ -150,3 +155,4 @@ var NewsPage;
         angular.module('NewsPage').controller('AdminController', AdminController);
     })(Controllers = NewsPage.Controllers || (NewsPage.Controllers = {}));
 })(NewsPage || (NewsPage = {}));
+//# sourceMappingURL=controllers.js.map

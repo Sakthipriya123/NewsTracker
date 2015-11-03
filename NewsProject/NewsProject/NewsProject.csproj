@@ -265,17 +265,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511030439080_start.cs" />
-    <Compile Include="Migrations\201511030439080_start.Designer.cs">
-      <DependentUpon>201511030439080_start.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511030705284_st.cs" />
-    <Compile Include="Migrations\201511030705284_st.Designer.cs">
-      <DependentUpon>201511030705284_st.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511030905086_hhh.cs" />
-    <Compile Include="Migrations\201511030905086_hhh.Designer.cs">
-      <DependentUpon>201511030905086_hhh.cs</DependentUpon>
+    <Compile Include="Migrations\201511032325492_start.cs" />
+    <Compile Include="Migrations\201511032325492_start.Designer.cs">
+      <DependentUpon>201511032325492_start.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -436,14 +428,8 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511030439080_start.resx">
-      <DependentUpon>201511030439080_start.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511030705284_st.resx">
-      <DependentUpon>201511030705284_st.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511030905086_hhh.resx">
-      <DependentUpon>201511030905086_hhh.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511032325492_start.resx">
+      <DependentUpon>201511032325492_start.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

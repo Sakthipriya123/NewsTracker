@@ -40,9 +40,13 @@ var NewsPage;
             CommentService.prototype.save = function (comment) {
                 return this.commentResource.save(comment).$promise;
             };
+            CommentService.prototype.getComment = function (id) {
+                return this.commentResource.get({ id: id }).$promise;
+            };
             return CommentService;
         })();
         Services.CommentService = CommentService;
         angular.module("NewsPage").service("commentService", CommentService);
     })(Services = NewsPage.Services || (NewsPage.Services = {}));
 })(NewsPage || (NewsPage = {}));
+//# sourceMappingURL=services.js.map

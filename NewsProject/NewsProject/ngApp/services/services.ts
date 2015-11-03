@@ -52,6 +52,10 @@
         public save(comment){
             return this.commentResource.save(comment).$promise;
         }
+
+        public getComment(id: number) {
+            return this.commentResource.get({ id: id }).$promise;
+        }
                
 
         constructor($resource: ng.resource.IResourceService) {

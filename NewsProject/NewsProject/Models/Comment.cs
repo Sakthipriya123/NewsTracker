@@ -13,10 +13,10 @@ namespace NewsProject.Models
         public int Id { get; set; }
         [Key]
         public ApplicationUser User { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public int NewsId { get; set; }
         public string CommentText { get; set; }
         public DateTime CommentedOn { get; set; }
-        public Guid User_Id { get; set; }
+       
     }
 }

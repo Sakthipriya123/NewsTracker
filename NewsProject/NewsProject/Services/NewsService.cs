@@ -28,7 +28,7 @@ namespace NewsProject.Services
         public News GetNews(int id)
         {
             //News news = this._repo.Find<News>(id);
-            News news = _repo.Query<News>().Include(r => r.Comments).Where(f => f.Id == id).ToList()[0];
+            News news = _repo.Query<News>().Include(r => r.Comments).Include(u => u.Comments.Select(c => c.User)).Where(f => f.Id == id).ToList()[0];
             return news;
                              
         }

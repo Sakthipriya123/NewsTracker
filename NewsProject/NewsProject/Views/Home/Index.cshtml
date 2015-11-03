@@ -42,7 +42,7 @@
                         <a href="/Signin" ng-show="!account.isLoggedIn()">Sign in</a>
                     </li>
                     <li class="pull-right">
-                        <h2 ng-show="account.isLoggedIn()">{{account.loginUser.fullName}}</h2>
+                        <h2 ng-show="account.isLoggedIn()">{{account.registerUser}}</h2>
                     </li>
                     <li class="pull-right">
                         <a href="/Signin" ng-click="account.logout()" ng-show="account.isLoggedIn()">logout</a>

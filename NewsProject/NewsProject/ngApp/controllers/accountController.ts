@@ -38,7 +38,7 @@
                 this.$location.path('/');
             }).catch((results) => {
                 this.validationMessages = results;
-            });
+                 });
         }
 
         constructor(private accountService: NewsPage.Services.AccountService, private $location: ng.ILocationService) { }

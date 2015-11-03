@@ -136,7 +136,7 @@
     class DialogController {
         public articleToView;
         public comment;
-        public user;
+        
 
         public ok() {
             this.$modalInstance.close();
@@ -150,6 +150,12 @@
             });
 
         }
+
+        //private fetchComment() {
+        //    this.commentService.getComment(this.newsArticleId).then((data) => {
+        //        this.articleToView = data;
+        //    });
+        //}
 
         private fetchArticle() {
             this.newsServices.getArticle(this.newsArticleId).then((data) => {

@@ -90,7 +90,7 @@ namespace NewsProject.Providers
         {
             IDictionary<string, string> data = new Dictionary<string, string>
             {
-                { "userName", user.UserName },
+                { "userName", user.FullName },
             };
 
             // add claims (modified by Stephen)

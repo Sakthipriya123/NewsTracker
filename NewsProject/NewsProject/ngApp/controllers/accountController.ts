@@ -2,7 +2,7 @@
 
     export class AccountController {
         public externalLogins;
-
+       
          public getClaim(type) {
             return this.accountService.getClaim(type);
         }
@@ -18,6 +18,11 @@
         public getExternalLogins() {
             return this.accountService.getExternalLogins();
         }
+
+        public getUserName() {
+            return this.accountService.getUserName();
+        }
+        
 
         constructor(private accountService: NewsPage.Services.AccountService, private $location: ng.ILocationService) {
             this.getExternalLogins().then((results) => {

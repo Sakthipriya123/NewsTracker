@@ -23,6 +23,9 @@ var NewsPage;
             AccountController.prototype.getExternalLogins = function () {
                 return this.accountService.getExternalLogins();
             };
+            AccountController.prototype.getUserName = function () {
+                return this.accountService.getUserName();
+            };
             return AccountController;
         })();
         Controllers.AccountController = AccountController;

@@ -12,6 +12,7 @@ var NewsPage;
             AccountService.prototype.storeUserInfo = function (userInfo) {
                 // store auth token
                 this.$window.sessionStorage.setItem('token', userInfo.access_token);
+                this.$window.sessionStorage.setItem('userName', userInfo.userName);
                 // store claims
                 for (var prop in userInfo) {
                     if (prop.indexOf('claim_') == 0) {
@@ -21,6 +22,9 @@ var NewsPage;
             };
             AccountService.prototype.getClaim = function (type) {
                 return this.$window.sessionStorage.getItem('claim_' + type);
+            };
+            AccountService.prototype.getUserName = function () {
+                return this.$window.sessionStorage.getItem('userName');
             };
             AccountService.prototype.login = function (loginUser) {
                 var _this = this;

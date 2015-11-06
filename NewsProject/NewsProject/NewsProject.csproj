@@ -265,9 +265,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201511032325492_start.cs" />
-    <Compile Include="Migrations\201511032325492_start.Designer.cs">
-      <DependentUpon>201511032325492_start.cs</DependentUpon>
+    <Compile Include="Migrations\201511050736265_start.cs" />
+    <Compile Include="Migrations\201511050736265_start.Designer.cs">
+      <DependentUpon>201511050736265_start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511050844072_dd.cs" />
+    <Compile Include="Migrations\201511050844072_dd.Designer.cs">
+      <DependentUpon>201511050844072_dd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountBindingModels.cs" />
@@ -428,8 +432,11 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201511032325492_start.resx">
-      <DependentUpon>201511032325492_start.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201511050736265_start.resx">
+      <DependentUpon>201511050736265_start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511050844072_dd.resx">
+      <DependentUpon>201511050844072_dd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

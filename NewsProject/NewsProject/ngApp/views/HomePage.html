@@ -10,8 +10,13 @@
                     <h4 id="title">{{publish.title}}</h4>
                     <h5 id="author">By {{publish.author}}</h5>
                    <p id="desc">{{publish.description}}</p>
-                   <h4 class="category">{{publish.categoryName}}</h4>
-                   <h5 class="category" ng-model="publish.comments">{{publish.comments.length}}comment</h5>
+                <div ng-model="publish.comments" class="category" style="vertical-align:central">
+                {{publish.categoryName}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                   
+                    <img src="../../Content/comment.jpe" height="20px" width="20px" />
+                    ({{publish.comments.length}})
+                </div>
+                   <!--<h5 class="category" ng-model="publish.comments">{{publish.comments.length}}comment</h5>-->
             </div>
                 </div>
             <!--<div class="col-md-1"></div>-->

@@ -6,7 +6,7 @@
         storeUserInfo(userInfo) {
             // store auth token
             this.$window.sessionStorage.setItem('token', userInfo.access_token);
-            this.$window.sessionStorage.setItem('userName', userInfo.userName);
+            this.$window.sessionStorage.setItem('FullName', userInfo.userName);
 
                 // store claims
             for (let prop in userInfo) {

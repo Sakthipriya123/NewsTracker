@@ -10,7 +10,13 @@
     <form ng-submit="modal.newComment()">
     <textarea maxlength="500" class="form-control" style="width:2000px"  ng-model="modal.comment.commentText" />
     <button type="submit" class="button btn-success" style="width:150px; font-weight:300">Post Comment</button></form>
-    <p ng-repeat="comment in modal.articleToView.comments">Commented on: {{comment.commentedOn}}: {{comment.commentText}} by {{comment.user.fullName}}</p><hr/>
+    <div ng-repeat="comment in modal.articleToView.comments"><b>{{comment.user.fullName}}</b>: {{comment.commentText}}
+    <br />
+    {{comment.commentedOn | date: 'yyyy-MM-dd hh:mm' }}
+        <hr />
+    </div>
+    
+
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" ng-click="modal.ok()">Close</button>

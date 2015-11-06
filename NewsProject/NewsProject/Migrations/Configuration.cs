@@ -185,8 +185,8 @@ namespace NewsProject.Migrations
                  Title = "Microsoft has trapped its biggest partners between a rock and a hard place",
                  Author = "Max Slater-Robinss",
                  Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Sales in the PC industry are declining at around 11% per quarter, according to IDC, causing drops in profits for PC makers. Microsoft is somewhat insulated from this decline thanks to big enterprise sales, but the company's increased focus on hardware with the new Surface Book Pro — a high-end laptop with a touch screen — is making its partners anxious.[Surface] will bother OEMs and I know from conversations with OEMs they have mixed reactions,  says analyst Annette Zimmermann of Gartner. (Microsoft historically calls PC makers OEMs,  or original equipment manufacturers.)Business Insider spoke to one source at an PC maker who described Microsoft as a sleeping lion.For the time being, Microsoft still needs the PC makers to get to its goal of selling a billion Windows 10 PCs in the next few years.John Delaney, an analyst from IDC, told Business Insider that Microsoft is trying to bring excitement to the Windows vector"" with the Surface Book, and the company needs others on - board to help fuel the fire.Some PC makers, Dell and HP, have even set up deals to distribute the Surface Book to big companies through their enterprise consulting businesses.The truth is, we have entered a period in the industry where winning for the major players is no longer solely about capturing share, it’s about expanding the company’s footprint in the value chain,Huang told BI.Just how PC makers are going to continue creating value is, however, the multibillion dollar question. "
-             }
+                 FullArticle = "Sales in the PC industry are declining at around 11% per quarter, according to IDC, causing drops in profits for PC makers. Microsoft is somewhat insulated from this decline thanks to big enterprise sales, but the company's increased focus on hardware with the new Surface Book Pro — a high-end laptop with a touch screen — is making its partners anxious.[Surface] will bother OEMs and I know from conversations with OEMs they have mixed reactions,  says analyst Annette Zimmermann of Gartner. (Microsoft historically calls PC makers OEMs,  or original equipment manufacturers.)Business Insider spoke to one source at an PC maker who described Microsoft as a sleeping lion.For the time being, Microsoft still needs the PC makers to get to its goal of selling a billion Windows 10 PCs in the next few years.John Delaney, an analyst from IDC, told Business Insider that Microsoft is trying to bring excitement to the Windows vector with the Surface Book, and the company needs others on - board to help fuel the fire.Some PC makers, Dell and HP, have even set up deals to distribute the Surface Book to big companies through their enterprise consulting businesses.The truth is, we have entered a period in the industry where winning for the major players is no longer solely about capturing share, it’s about expanding the company’s footprint in the value chain,Huang told BI.Just how PC makers are going to continue creating value is, however, the multibillion dollar question. "
+                        }
                     }
                 },
 
@@ -231,21 +231,21 @@ namespace NewsProject.Migrations
                     News = new News[]
                     {
                         new News {
-                        Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
-                         },
+                        Image = "http://static2.politico.com/dims4/default/227ed14/2147483647/resize/1160x%3E/quality/90/?url=http%3A%2F%2Fstatic.politico.com%2F91%2F9f%2Ffd5029244ff3a817a3e9f48cd972%2F20151103-frank-votersdysfunction-getty.jpg",
+                 Title = "How Voters Cause Washington’s Gridlock",
+                 Author = "BARNEY FRANK",
+                 Description = "It’s all too common today to portray regular Americans as the victims of dysfunctional politicians. It’s certainly true that in recent years ",
+                 FullArticle = "It’s all too common today to portray regular Americans as the victims of dysfunctional politicians. It’s certainly true that in recent years those in public office seem unable to make the combination of tough choices and difficult compromises necessary for our government to function. But elected decision makers don’t operate in a vacuum; they’re not self-selected autonomous actors who willfully refuse to work together as matters of personal choice or political temperament.Those decision makers, after all, were chosen by the very voters now complaining of dysfunction. And there is no basis for harshly condemning the elected while expressing sympathy for the electorate whose decisions put politicians in office.After all, the desires of the voters are a major influence on how officeholders behave once they are in power.The electorate as a whole has established the basis for gridlock by its biennial display of schizophrenia. In 2008, the people put Barack Obama in power, with a Democratic congressional majority. Two years later they gave the House to people who had made clear their determination to both do everything possible to stop Obama from achieving anything he wanted to accomplish and also to undo everything he had already done. Two years later, in 2012, they switched back to Barack Obama, renewing his mandate—only to revert to empowering his unrelenting opponents in 2014.To repeat a point I have made here earlier, this alternation of electoral winners has been particularly stressful because our Constitution staggers terms of federal officeholders. Had the winner in each cycle gained with their victory the ability to enact their agendas, we would not have suffered from gridlock, although we might have seen its opposite—policy whiplash. But with our Constitution calling for senators serving six - year terms, the president four, and House members two, it usually takes two successive biennial election victories to get the power to make major changes.Those who win every two years only to lose two years later do get the power to block further action. But this two - year - long time in power rarely carries with it the ability to undo previously enacted policy."
+                        },
                         new News
              {
 
-                 Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
+                 Image = "http://cdn.theatlantic.com/assets/media/img/mt/2015/11/RTS7K3/lead_960.jpg?1446663483",
+                 Title = "Liberals Are Losing the Culture Wars",
+                 Author = "DAVID M. HERSZENHORN",
                  Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
-             }
+                 FullArticle = "In Tuesday’s elections, voters rejected recreational marijuana, transgender rights, and illegal-immigrant sanctuaries; they reacted equivocally to gun-control arguments; and they handed a surprise victory to a Republican gubernatorial candidate who emphasized his opposition to gay marriageDemocrats have become increasingly assertive in taking liberal social positions in recent years, believing that they enjoy majority support and even seeking to turn abortion and gay rights into electoral wedges against Republicans. But Tuesday’s results—and the broader trend of recent elections that have been generally disastrous for Democrats not named Barack Obama—call that view into question.Indeed, they suggest that the left has misread the electorate’s enthusiasm for social change, inviting a backlash from mainstream voters invested in the status quo.Democrats have increasingly seized the offensive on social issues in recent years, using opposition to abortion rights and gay marriage to paint Republican candidates as extreme and backward. In some cases, this has been successful: Red-state GOP Senate candidates Todd Akin and Richard Mourdock lost after making incendiary comments about abortion and rape in 2012, a year when Obama successfully leaned into cultural issues to galvanize the Democratic base. “The Republican Party from 1968 up to 2008 lived by the wedge, and now they are politically dying by the wedge,” Democratic consultant Chris Lehane told the New York Times last year, a view echoed by worried Republicans urging their party to get with the times.But the Democrats’ culture-war strategy has been less successful when Obama is not on the ballot. Two campaigns that made abortion rights their centerpiece in 2014, Wendy Davis’s Texas gubernatorial bid and Mark Udall’s Senate reelection campaign in Colorado, fell far short. In most of the country, particularly between the coasts, it’s far from clear that regular voters are willing to come to the polls for social change. Gay marriage won four carefully selected blue - state ballot campaigns in 2012 before the Supreme Court took the issue to the finish line this year.Recreational marijuana has likewise been approved only in three blue states plus Alaska.Gun - control campaigners have repeatedly failed to outflank the N.R.A. in down - ballot elections that turned on the issue.Republicans in state offices have liberalized gun laws and restricted abortion, generating little apparent voter backlash."
+                        }
                     }
                 },
 
@@ -264,7 +264,7 @@ namespace NewsProject.Migrations
                         new News
              {
 
-                 Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
+                 Image = "http://o.aolcdn.com/hss/storage/midas/cf03bc27639c5e6ec1906db0bf6a30eb/202896944/nissan-intelligent-driving.jpg",
                  Title = "Nissan unleashes its autonomous car prototype in Japan",
                  Author = "Mariella Moon",
                  Description = "Nissan has begun testing its Leaf-based autonomous car prototype, not on private property, but on Japanese inner city roads and highways. To be exact, the automaker wants to put its Piloted Drive mode (part of its Intelligent Driving System) to the test, which can take control of the car in certain conditions. ",
@@ -279,21 +279,20 @@ namespace NewsProject.Migrations
                     News = new News[]
                     {
                         new News {
-                        Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
-                         },
+                        Image = "http://api.ning.com/files/wPLxwzT3RH*-99sCWv23w4gVXGnLYMibks9KLQ9SByDVzhTDFNI4Wiy35Q*9mjCtA7x*q-CPmTx058gnfl6nz1MeODjux3zm/FloatingMosqueweb.jpg?width=737&height=492",
+                 Title = "Sharp Photography Tips & Techniques",
+                 Author = "Klaus Herrmann",
+                 Description = "There are lots of ingredients that go into making a spectacular photograph, but the most important is for the picture to be in sharp focus.",
+                 FullArticle = "There are lots of ingredients that go into making a spectacular photograph, but the most important is for the picture to be in sharp focus. Even the slightest blur takes away from the picture, no matter how good the subject, lighting, and color. Photographers have somewhat varying opinions on what constitutes a tack sharp picture, but generally, a tack sharp photograph has good, clean lines. The picture has clear definition instead of a soft blending of lines—or even downright blurriness.There are several things you can do to increase your chances of getting that coveted tack sharp picture. Hand-Held Digital Photography Tips .If you’re hand-holding your camera, brace your arms against your sides to help steady the camera. If your camera has anti-shake technology, such as Vibration Reduction (VR) or Image Stabilization (IS) that can be switched on and off, this is the time to have it turned on.You can also lean against a wall or tree or whatever sturdy object that’s handy, and help keep yourself and your camera steady. Alternatively, lean or lay your camera or lens on some readily available sturdy object to help steady the camera.Steadying your camera by hooking the strap under your elbow and wrapping the rest around your forearm will also help stabilize the camera and hold it steady in your hand.Getting those tack sharp photos while hand - holding your camera can be difficult, so to increase your chances of getting that perfect shot, use the burst or continuous shooting mode to take several shots at once. That increases your chances that at least one of the pictures will be in sharp focus.  "                         },
                         new News
              {
 
-                 Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
-             }
+                 Image = "http://api.ning.com/files/tx3GxNHqMI1Vy2WgwOhJcWEojxGndrPBLWvi40CXv0n4-cG-qKdtxatZd3gYIgd9bfUdUFDUH39XVErM*U28EGuzoe38dM-L/IMG_47741.jpg?width=737&height=490",
+                 Title = "Photographing the Micro Landscape",
+                 Author = "Klaus Herrmenn",
+                 Description = " When I began making pictures of the landscape, it was always the big picture that mattered. And I suppose it’s the same for most of us. It was a case of taking a few exposures and then moving on to the next grand view. ",
+                 FullArticle = "When I began making pictures of the landscape, it was always the big picture that mattered. And I suppose it’s the same for most of us. It was a case of taking a few exposures and then moving on to the next grand view.Then came the day when I needed to make some pictures—photographers will know what I mean—and the weather was against me. Uniformly grey clouds and lousy light are no recipe for great landscape shots."
+                        }
                     }
                 },
 
@@ -306,14 +305,14 @@ namespace NewsProject.Migrations
                  Image = "http://assets.dwell.com/sites/default/files/styles/article_photo/public/2014/09/04/august-smart-lock-open-symbol.jpg?itok=jXZuz3bb",
                  Title = "Best of #ModernMonday: Digital and Analog Innovation in Design",
                  Author = "Luke Hopping",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
+                 Description = "SABO was invited to rethink the Paris apartment of a young fashion designer looking to maximize her space. ",
+                 FullArticle = "SABO was invited to rethink the Paris apartment of a young fashion designer looking to maximize her space. The design consist of several partition removals and the insertion of a multi function thick wall acting as stair, office, display, closet, fabric storage, natural and artificial light source or sliding partitioning. The porous furniture allows for natural light to reach a central corridor as well as framing views between the new bedroom and the living room.The swaying steps of an alternate tread stair celebrates the surrounding hills and climbing culture of Montmartre.In the kitchen, a mini vertical garden provides fresh aromatic herbs thanks to a mix of direct sun exposure and specialized artificial lighting. A steel countertop with custom integrated drainer is welded in place to stretch over 15 foot seamlessly. In contrast is a whimsy floor composed of a 25 natural rubber strips of 14 different colors."
                          },
                         new News
              {
 
                  Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
+                 Title = "Architrecture",
                  Author = "Paul Keskeys",
                  Description = "Architecture starts when you carefully put two bricks together. There it begins.Mies van der Rohe’s words succinctly allude to the raw, fundamental qualities of masonry ",
                  FullArticle = "Architecture starts when you carefully put two bricks together. There it begins.Mies van der Rohe’s words succinctly allude to the raw, fundamental qualities of masonry that have made it one of architecture’s most loved building materials. From Louis Khan to Frank Lloyd Wright, some of the greatest architects of the past century have captured the collective imagination of the world with their remarkable uses of brick, creating some truly iconic buildings with the most humble of mediums.Despite its ancient origins, the varied texture, color, and shape of brick causes architects to continuously explore new and unexpected applications that harness this versatile material for the evolving needs of clients.Many of these innovative uses of masonry are detailed via stunning photography in Phaidon’s book of serious architectural eye candy simply entitled Brick.Many of the façades featured can teach us how brick can be utilized to create a building envelope full of color, texture, and formal delight.Here, we explore seven approaches adopted by architects in recent times that channel the spirit of the classics while providing a modern twist.This is the best of brick:"
@@ -352,20 +351,20 @@ namespace NewsProject.Migrations
                     News = new News[]
                     {
                         new News {
-                        Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
+                        Image = "http://www.travelandleisure.com/sites/default/files/styles/tnl_redesign_article_landing_page/public/bay-lake-tower-at-disney.jpg?itok=-FukDFME",
+                 Title = "How to Save 55% on a Luxury Disney Vacation",
+                 Author = "Laura Kreder",
+                 Description = "Disney World's Deluxe Resorts appear to be out of reach for the average traveler; even a short stay can cost thousands of dollars—not to mention ",
+                 FullArticle = "Disney World's Deluxe Resorts appear to be out of reach for the average traveler; even a short stay can cost thousands of dollars—not to mention the increasing cost of park tickets. But by renting vacation points from Disney Vacation Club (DVC) members, you can enjoy Disney at a discount.It's impossible to go to Disney without seeing the glossy ads for the Disney Vacation Club (DVC). Each year, members receive points that allow them to book accommodations at any deluxe resort with DVC rooms. This includes the majority of luxury resorts at Disney. When these points aren't used, members have the ability to rent (sell) their points to anyone, either directly or through a third-party service like the DVC Rental Store.The splurge for a Disney property is worthwhile.It allows visitors to live within the magical illusion of Disney for their entire vacations, and take advantage of added perks that are unavailable off - site.In recent years, Disney has added FastPass +, which allows resort guests to reserve a limited number of experiences up to 60 days in advance.That's right: Toy Story Mania without the 90-minute wait! Similarly, resort guests are able to make dining reservations up to 180 days in advance and enjoy extended magic hours in the park. Disney also provides complimentary airport transportation through their motor coach service, Disney Express. Disney's luxury resorts offer convenience, first-class service, and impeccable accomodations. There's only one problem: they're expensive. If you rent points from a DVC member, however, you can experience Disney savings well beyond any advertised special.The amount of points you'll be required to rent (purchase) will depend on several factors, including the resort and room type selected, season, and day of the week you visit. You may also be required to pay additional points if you are booking your accommodations more than seven months in advance. Once you've determined how many points are necessary, this figure is converted to a dollar amount."
                          },
                         new News
              {
 
-                 Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
+                 Image = "http://skift.com/wp-content/uploads/2015/02/homeaway.jpg",
+                 Title = "Expedia Acquires HomeAway For $3.9 Billion",
+                 Author = "Dennis Schaal, ",
+                 Description = "Skift Take: With more than 1 million paid listings in more than 190 countries, Expedia's pending acquisition of HomeAway is a game-changer in that it saves",
+                 FullArticle = "Skift Take: With more than 1 million paid listings in more than 190 countries, Expedia's pending acquisition of HomeAway is a game-changer in that it saves Expedia years of building up its own vacation rental supply in an increasingly important lodging sector.— Dennis Schaal . Here we go: After years of speculation about whether it would be Expedia, TripAdvisor, the  Priceline Group or Google to do it, Expedia Inc. agreed to acquire HomeAway for $3.9 billion in cash and stock.Expedia Inc., which has over the last year acquired Travelocity, Orbitz Worldwide and Australia’s Wotif, obviously wasn’t done with its acquisition spree as it competes with the likes of the Priceline Group’s Booking.com and Airbnb in hotels and vacation rentals with Priceline, and apartments and increasingly vacation rentals in the case of Airbnb.HomeAway announced that its board of directors unanimously approved the acquisition by Expedia, which will include all of HomeAway’s global brands, including VRBO, HomeAway.com, and VacationRentals.com in the United States; HomeAway.co.uk and OwnersDirect.co.uk in the United Kingdom; HomeAway.de in Germany; Abritel.fr and Homelidays.com in France; HomeAway.es and Toprural.es in Spain; AlugueTemporada.com.br in Brazil; HomeAway.com.au and Stayz.com.au in Australia; and Bookabach.co.nz in New Zealand. Asia Pacific short-term rental site, travelmob.com.Expedia has been experimenting over the last year in the U.S.and Europe with integrating HomeAway’s vacation rentals, especially its online bookable properties, into Expedia’s hotel listings when consumers looked for stays around a week or more but Expedia was taking its time with the implementation.In the past, Expedia officials stated that while they were certainly interested in vacation rentals, and would aggressively onboard apartment listings in coming years, hotels would remain the priority.With more than 1 million paid listings in more than 190 countries, Expedia’s pending acquisition of HomeAway is a game - changer in that it saves Expedia years of building up its own vacation rental supply in an increasingly important lodging sector."
              }
                     }
                 },
@@ -376,20 +375,20 @@ namespace NewsProject.Migrations
                     News = new News[]
                     {
                         new News {
-                        Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
+                        Image = "https://pbs.twimg.com/media/CS_GvIaXIAA1Lbg.jpg:small",
+                 Title = "New Star Wars: The Force Awakens Posters Feature Finn, Han, Leia, and More",
+                 Author = "Kevin P. Sullivan ",
+                 Description = "Fresh posters feature old and new faces and offer a glimpse at the mysterious film",
+                 FullArticle = "Fresh posters feature old and new faces and offer a glimpse at the mysterious film.When a major film release is a month and a half away and you still don’t know what it’s actually about, that’s Mystery Box master J.J. Abrams’ secret keeping at its fiercest. That’s why it’s so unexpected when something as standard as character posters drop for Star Wars: The Force Awakens.We still have no idea what Luke is up to, but new posters feature Finn(John Boyega), Rey(Daisy Ridley), Kylo Ren(Adam Driver), Han Solo(Harrison Ford), and Leia(Carrie Fisher).And it will have to do until The Force Awakens on Dec. 18."
                          },
                         new News
              {
 
-                 Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
+                 Image = "https://uproxx.files.wordpress.com/2015/08/colin_trevorrow_jurassic_world.jpg?quality=90&w=650&h=384",
+                 Title = "Steven Spielberg And Colin Trevorrow Are Turning ‘Jurassic World’ Into A Trilogy",
+                 Author = "DARIEL FIGUEROA",
+                 Description = "Universal Pictures went HAM this year, scoring four of the top-ten highest grossing films of 2015. Currently occupying the top two spots with Jurassic World ($1.6 billion) ",
+                 FullArticle = "Universal Pictures went HAM this year, scoring four of the top-ten highest grossing films of 2015. Currently occupying the top two spots with Jurassic World ($1.6 billion), and Furious 7 ($1.5 billion), the studio is mapping out plans on how to lay down enough track so the gravy train wraps itself around the decade. In a recent roundtable for The Hollywood Reporter, Universal executive, Donna Langley, commented on the successes of the smaller films as well as the big ones.Part of Universal’s plan lies in the able hands of Steven Spielberg and Jurassic World director Colin Trevorrow. While we already knew that one more Jurassic World film was on its way, Langley let us know that it’s not the only film in the current dinosaur saga that we’ll be subjected to.[Director] Colin Trevorrow is busy working on an outline. He’s been working with Steven [Spielberg]. And they have an idea for the next two movies actually.It was designed as a trilogy, unbeknown to us.It’s a happy surprise.Trevorrow is not attached to the second Jurassic World film, he has a commitment to Star Wars: Episode IX, but he is writing it, and stars Bryce Dallas Howard and Chris Pratt will be reprising their roles.The dinosaurs will be invading theaters once again on June 22, 2018."
              }
                     }
                 },
@@ -400,20 +399,20 @@ namespace NewsProject.Migrations
                     News = new News[]
                     {
                         new News {
-                        Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
-                         },
+                        Image = "http://i2.wp.com/venturebeat.com/wp-content/uploads/2015/06/Halo-5-Guardians-E3-2015-Master-Chief-05.jpg?fit=930%2C9999",
+                 Title = "Halo 5: Guardians sales top $400M in first week",
+                 Author = "DEAN TAKAHASHI",
+                 Description = "Microsoft didn’t say exactly how many copies it sold. But based on a $60 retail price, the number could be over 6.6 million sold so far",
+                 FullArticle = "Microsoft didn’t say exactly how many copies it sold. But based on a $60 retail price, the number could be over 6.6 million sold so far. Halo 5: Guardians has a rating of 85 out of 100 on game review aggregator Metacritic. It is the highest-rated Xbox One exclusive title to date.So far, fans of the game, developed by Microsoft’s 343 Industries studio, have logged more than 21 million hours in the game, including 12 million hours in the campaign mode. The multiplayer modes have been played 9 million total hours with nearly 7 million multiplayer matches across Arena and the new Warzone mode. This is all according to Microsoft.Halo 5 has a new Requisition System, where you can earn points to get better equipment in Warzone battles. Players have gotten more than 45 million REQ packs and 568 million REQ cards.Halo 5: Live also earned a Guinness World Records “title” for the most-watched video game launch broadcast, with more than 330, 000 unique streams on the evening of the broadcast.Content from the broadcast generated 5.5 million total views throughout the week.That led to the game becoming the best - selling digital game ever in the Xbox store for an opening week.On Twitch, people watched more than 3 million hours of Halo 5.Again, these stats are from Microsoft.“The success of Halo 5: Guardians is a testament to the innovative work from the entire team at 343 Industries to bring this installment to Xbox One and the incredible community of fans who have come to love the story, characters and gameplay central to the franchise,” said Phil Spencer, head of Xbox, in a statement. “The game represents all the possibilities of Xbox One and has earned its place as the anchor title in the greatest holiday games lineup in Xbox history.” "                      
+                        },
                         new News
              {
 
-                 Image = "http://assets.bwbx.io/images/iwX6Mv5tU9Vs/v1/640x-1.jpg",
-                 Title = "Facebook Is Following You",
-                 Author = "Russell Brandom",
-                 Description = "You knew that, right? How else would Facebook know to serve that panda video straight into your newsfeed,  ",
-                 FullArticle = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget sapien sapien. Curabitur in metus urna. In hac habitasse platea dictumst. Phasellus eu sem sapien, sed vestibulum velit. Nam purus nibh, lacinia non faucibus et, pharetra in dolor. Sed iaculis posuere diam ut cursus. Morbi commodo sodales nisi id sodales. Proin consectetur, nisi id commodo imperdiet, metus nunc consequat lectus, id bibendum diam velit et dui. Proin massa magna, vulputate nec bibendum nec, posuere nec lacus. Aliquam mi erat, aliquam vel luctus eu, pharetra quis elit. Nulla euismod ultrices massa, et feugiat ipsum consequat eu."
+                 Image = "http://static4.gamespot.com/uploads/scale_super/536/5360430/2879022-image.img.jpg",
+                 Title = "Star Wars Battlefront's Xbox One Early Release Includes 10 Hours of Gameplay",
+                 Author = "Eddie Makuch ",
+                 Description = "Star Wars Battlefront launches on Xbox One through EA Access on November 12, a full five days before the game's official release date. ",
+                 FullArticle = "Star Wars Battlefront launches on Xbox One through EA Access on November 12, a full five days before the game's official release date. Now, EA has confirmed that gameplay will be capped at 10 hours. That's the typical gameplay duration for EA Access games, including the most recent release, Need for Speed.You can play Star Wars Battlefront for a total of 10 hours, EA said on Twitter. That includes any single - player missions or multiplayer battles.EA Access memberships are available for $5 / month or $30 / year.In addition to early play for upcoming games, members have access to a continually growing library of free games and can save 10 percent on all EA digital content.There is no word yet if EA Access will come to PlayStation 4."
              }
                     }
                 },
@@ -436,6 +435,7 @@ namespace NewsProject.Migrations
                 user = new ApplicationUser
                 {
                     UserName = "Priya@gmail.com",
+                    FullName ="Priya",
                     Email = "Priya@gmail.com"
                 };
                 userManager.Create(user, "codercamp123");

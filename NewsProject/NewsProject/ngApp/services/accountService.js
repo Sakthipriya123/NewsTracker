@@ -12,7 +12,7 @@ var NewsPage;
             AccountService.prototype.storeUserInfo = function (userInfo) {
                 // store auth token
                 this.$window.sessionStorage.setItem('token', userInfo.access_token);
-                this.$window.sessionStorage.setItem('userName', userInfo.userName);
+                this.$window.sessionStorage.setItem('FullName', userInfo.userName);
                 // store claims
                 for (var prop in userInfo) {
                     if (prop.indexOf('claim_') == 0) {

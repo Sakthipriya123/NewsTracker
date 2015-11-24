@@ -3,7 +3,7 @@ namespace NewsProject.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class start : DbMigration
+    public partial class news : DbMigration
     {
         public override void Up()
         {

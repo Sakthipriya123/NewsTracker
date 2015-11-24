@@ -24,7 +24,7 @@ var NewsPage;
                 return this.$window.sessionStorage.getItem('claim_' + type);
             };
             AccountService.prototype.getUserName = function () {
-                return this.$window.sessionStorage.getItem('userName');
+                return this.$window.sessionStorage.getItem('FullName');
             };
             AccountService.prototype.login = function (loginUser) {
                 var _this = this;

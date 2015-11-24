@@ -11,4 +11,10 @@ namespace NewsProject.Models
         public string CategoryName { get; set; }
         public virtual ICollection<NewsView> News { get; set; }
     }
+    public class CategoryListView
+    {
+        public int Id { get; set; }
+        public string CategoryName { get; set; }
+        public virtual ICollection<NewsListView> News { get; set; }
+    }
 }

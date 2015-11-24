@@ -21,7 +21,7 @@
         }
 
         getUserName() {
-            return this.$window.sessionStorage.getItem('userName');
+            return this.$window.sessionStorage.getItem('FullName');
         }
 
 

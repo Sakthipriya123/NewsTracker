@@ -25,16 +25,16 @@ namespace NewsProject.Services
             return category;
         }
 
-        public CategoryView GetNews(int id)
+        public CategoryListView GetNews(int id)
         {
             //ICollection<News> category = _repo.Query<News>().ToList();
             //return category;
             Category category = _repo.Find<Category>(id);
-            var categoryview = new CategoryView
+            var categoryview = new CategoryListView
             {
                 CategoryName = category.CategoryName,
                 Id = category.Id,
-                News = category.News.Select(c => new NewsView { Id = c.Id,Title = c.Title,Image = c.Image, Author = c.Author,Description=c.Description }).OrderByDescending(x => x.Id).ToList(),
+                News = category.News.Select(c => new NewsListView { Id = c.Id,Title = c.Title,Image = c.Image, Author = c.Author,Description=c.Description,Comments=c.Comments,CategoryName=c.Category.CategoryName }).OrderByDescending(x => x.Id).ToList(),
              
             };
             return categoryview;
